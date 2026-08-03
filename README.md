@@ -1,4 +1,3 @@
-<!--
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║          SAHAL111 · GITHUB PROFILE README · ULTRA PREMIUM EDITION           ║
 ║          Built with: SVG · CSS Animation · GitHub APIs · Markdown           ║
@@ -1609,4 +1608,4 @@ coffee:       "☕ Required before 10am"
 ║            WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}            ║
 ║                                                                          ║
 ╚══════════════════════════════════════════════════════════════════════════╝
--->
+
