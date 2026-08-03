@@ -1,315 +1,448 @@
-<!-- ============================================================
-     SAHAL111 · GITHUB PROFILE README
-     Author  : Sahal (X_ proff)
-     Version : 3.0 — Ultra Premium Edition
-     ============================================================ -->
+<!--
+╔══════════════════════════════════════════════════════════════════════════════╗
+║          SAHAL111 · GITHUB PROFILE README · ULTRA PREMIUM EDITION           ║
+║          Built with: SVG · CSS Animation · GitHub APIs · Markdown           ║
+║          Author: Sahal · Indonesia 🇮🇩 · github.com/Sahal111               ║
+╚══════════════════════════════════════════════════════════════════════════════╝
 
-<!-- ██████████████████████████████████████████████████████████ -->
-<!--                    HERO — ANIMATED SVG BANNER              -->
-<!-- ██████████████████████████████████████████████████████████ -->
+  SETUP NOTES FOR APIS:
+  ─────────────────────
+  ① Spotify Now Playing  → Deploy: github.com/novatorem/novatorem
+     Replace YOUR_VERCEL_URL with your deployed URL
+  ② Wakatime Stats       → Connect at wakatime.com, add secret WAKATIME_API_KEY
+  ③ Snake Animation      → Enable GitHub Actions workflow (included below)
+  ④ GitHub Actions       → Create .github/workflows/update.yml for auto-updates
+  ⑤ Discord Status       → Optional: lanyard.rest (add your Discord user ID)
+  ⑥ Holopin Badges       → Earn at holopin.io
+  ⑦ Leetcode             → Use leetcard.jacoblin.com with your username
+  ⑧ Codewars             → www.codewars.com/users/Sahal111
+-->
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--                   ANIMATED WAVE HEADER                  -->
+<!-- ═══════════════════════════════════════════════════════ -->
 
 <div align="center">
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" width="100%">
+<svg width="100%" height="120" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
   <defs>
-    <!-- Background gradient -->
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%"   stop-color="#0f172a"/>
-      <stop offset="50%"  stop-color="#0d1117"/>
+      <stop offset="30%"  stop-color="#0d1117"/>
+      <stop offset="70%"  stop-color="#0d2818"/>
       <stop offset="100%" stop-color="#0f172a"/>
     </linearGradient>
-    <!-- Neon glow filter -->
-    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+    <filter id="glow">
       <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <!-- Strong glow for signature -->
-    <filter id="strongGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <!-- Grid pattern -->
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
-    </pattern>
-    <!-- Particle animation gradient -->
-    <radialGradient id="particleGrad" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
-    </radialGradient>
-    <!-- Cyan text gradient -->
-    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%"   stop-color="#38bdf8"/>
-      <stop offset="50%"  stop-color="#6366f1"/>
-      <stop offset="100%" stop-color="#14b8a6"/>
-    </linearGradient>
-    <!-- Cyan line gradient -->
-    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%"   stop-color="#38bdf8" stop-opacity="0"/>
-      <stop offset="30%"  stop-color="#38bdf8"/>
-      <stop offset="70%"  stop-color="#6366f1"/>
-      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
-    </linearGradient>
-    <!-- Orbit gradient -->
-    <linearGradient id="orbitGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%"   stop-color="#38bdf8" stop-opacity="0"/>
-      <stop offset="50%"  stop-color="#38bdf8"/>
-      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
-    </linearGradient>
   </defs>
-
-  <!-- Base background -->
-  <rect width="900" height="280" fill="url(#bgGrad)" rx="16"/>
-
-  <!-- Grid overlay -->
-  <rect width="900" height="280" fill="url(#grid)" rx="16" opacity="0.4"/>
-
-  <!-- Floating particles -->
-  <g opacity="0.6">
-    <circle cx="60"  cy="40"  r="2" fill="#38bdf8">
-      <animate attributeName="cy" values="40;20;40"   dur="4s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="150" cy="80"  r="1.5" fill="#6366f1">
-      <animate attributeName="cy" values="80;55;80"   dur="5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.4;0.9;0.4" dur="5s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="820" cy="50"  r="2" fill="#14b8a6">
-      <animate attributeName="cy" values="50;30;50"   dur="3.5s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="750" cy="200" r="1.5" fill="#38bdf8">
-      <animate attributeName="cy" values="200;180;200" dur="6s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="500" cy="20"  r="1" fill="#6366f1">
-      <animate attributeName="cy" values="20;5;20"    dur="4.5s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="200" cy="250" r="2" fill="#2563eb">
-      <animate attributeName="cy" values="250;230;250" dur="5.5s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="860" cy="230" r="1.5" fill="#14b8a6">
-      <animate attributeName="cy" values="230;210;230" dur="4.2s" repeatCount="indefinite"/>
-    </circle>
-  </g>
-
-  <!-- Orbit rings (decorative) -->
-  <g transform="translate(820,60)" opacity="0.15">
-    <ellipse cx="0" cy="0" rx="55" ry="20" fill="none" stroke="#38bdf8" stroke-width="0.8">
-      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="8s" repeatCount="indefinite"/>
-    </ellipse>
-    <ellipse cx="0" cy="0" rx="35" ry="13" fill="none" stroke="#6366f1" stroke-width="0.6">
-      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="5s" repeatCount="indefinite"/>
-    </ellipse>
-    <circle cx="0" cy="0" r="5" fill="#38bdf8" opacity="0.6"/>
-  </g>
-
-  <!-- Corner decorations -->
-  <g filter="url(#neonGlow)">
-    <path d="M 0 40 L 0 16 Q 0 0 16 0 L 40 0" fill="none" stroke="#38bdf8" stroke-width="1.5" rx="16" opacity="0.7"/>
-    <path d="M 900 40 L 900 16 Q 900 0 884 0 L 860 0" fill="none" stroke="#38bdf8" stroke-width="1.5" opacity="0.7"/>
-    <path d="M 0 240 L 0 264 Q 0 280 16 280 L 40 280" fill="none" stroke="#6366f1" stroke-width="1.5" opacity="0.7"/>
-    <path d="M 900 240 L 900 264 Q 900 280 884 280 L 860 280" fill="none" stroke="#6366f1" stroke-width="1.5" opacity="0.7"/>
-  </g>
-
-  <!-- Name — main hero text -->
-  <text x="450" y="95" text-anchor="middle" font-family="'Courier New', monospace" font-size="52"
-        font-weight="900" fill="url(#textGrad)" filter="url(#neonGlow)" letter-spacing="6">
-    SAHAL
-    <animate attributeName="opacity" values="0;1" dur="1s" begin="0s" fill="freeze"/>
-  </text>
-
-  <!-- Subtitle -->
-  <text x="450" y="130" text-anchor="middle" font-family="'Courier New', monospace" font-size="13"
-        fill="#94a3b8" letter-spacing="8">
-    FULLSTACK DEVELOPER  ·  ML ENGINEER  ·  INDONESIA 🇮🇩
-    <animate attributeName="opacity" values="0;1" dur="1s" begin="0.3s" fill="freeze"/>
-  </text>
-
-  <!-- Divider line -->
-  <line x1="150" y1="148" x2="750" y2="148" stroke="url(#lineGrad)" stroke-width="1">
-    <animate attributeName="x1" values="450;150" dur="1s" begin="0.5s" fill="freeze"/>
-    <animate attributeName="x2" values="450;750" dur="1s" begin="0.5s" fill="freeze"/>
-  </line>
-
-  <!-- Role tags -->
-  <g font-family="'Courier New', monospace" font-size="11" fill="#38bdf8" filter="url(#neonGlow)">
-    <text x="450" y="172" text-anchor="middle">
-      <tspan fill="#6366f1">[ </tspan>React<tspan fill="#6366f1"> ] </tspan>
-      <tspan fill="#6366f1">[ </tspan>Laravel<tspan fill="#6366f1"> ] </tspan>
-      <tspan fill="#6366f1">[ </tspan>Python<tspan fill="#6366f1"> ] </tspan>
-      <tspan fill="#6366f1">[ </tspan>ML<tspan fill="#6366f1"> ] </tspan>
-      <tspan fill="#6366f1">[ </tspan>TypeScript<tspan fill="#6366f1"> ]</tspan>
-      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1s" fill="freeze"/>
-    </text>
-  </g>
-
-  <!-- Blinking cursor line -->
-  <rect x="445" y="185" width="10" height="2" fill="#38bdf8">
-    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
-  </rect>
-
-  <!-- Status dot -->
-  <circle cx="390" cy="215" r="5" fill="#22c55e" filter="url(#neonGlow)">
-    <animate attributeName="r" values="5;7;5" dur="2s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="1;0.6;1" dur="2s" repeatCount="indefinite"/>
+  <rect width="1440" height="120" fill="url(#headerGrad)"/>
+  <!-- Animated neon grid lines -->
+  <line x1="0" y1="60" x2="1440" y2="60" stroke="#00ff41" stroke-width="0.3" stroke-dasharray="4 8" opacity="0.3"/>
+  <line x1="0" y1="30" x2="1440" y2="30" stroke="#0ff" stroke-width="0.2" stroke-dasharray="2 12" opacity="0.2"/>
+  <line x1="0" y1="90" x2="1440" y2="90" stroke="#0ff" stroke-width="0.2" stroke-dasharray="2 12" opacity="0.2"/>
+  <!-- Matrix rain dots -->
+  <circle cx="100"  cy="20"  r="1.5" fill="#00ff41" opacity="0.8" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.8;0.1;0.8" dur="2.1s" repeatCount="indefinite"/>
+    <animate attributeName="cy"      values="20;100;20"   dur="4.2s" repeatCount="indefinite"/>
   </circle>
-  <text x="402" y="219" font-family="'Courier New', monospace" font-size="11" fill="#94a3b8">
-    Available for opportunities
-  </text>
-
-  <!-- Bottom tagline -->
-  <text x="450" y="255" text-anchor="middle" font-family="'Courier New', monospace" font-size="10"
-        fill="#334155" letter-spacing="3">
-    BUILDING THE FUTURE · ONE COMMIT AT A TIME
-  </text>
+  <circle cx="280"  cy="50"  r="1.5" fill="#00ff41" opacity="0.6" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.6;0.05;0.6" dur="1.7s" repeatCount="indefinite"/>
+    <animate attributeName="cy"      values="50;110;50"    dur="3.4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="460"  cy="10"  r="1"   fill="#00ff41" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;0.1;0.7" dur="2.8s" repeatCount="indefinite"/>
+    <animate attributeName="cy"      values="10;90;10"    dur="5.6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="640"  cy="70"  r="1.5" fill="#38bdf8" opacity="0.5" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.5;0.05;0.5" dur="2.3s" repeatCount="indefinite"/>
+    <animate attributeName="cy"      values="70;110;70"    dur="4.6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="820"  cy="35"  r="1"   fill="#38bdf8" opacity="0.6">
+    <animate attributeName="opacity" values="0.6;0.1;0.6" dur="1.9s" repeatCount="indefinite"/>
+    <animate attributeName="cy"      values="35;100;35"    dur="3.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1000" cy="55"  r="1.5" fill="#6366f1" opacity="0.5" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.5;0.1;0.5" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="cy"      values="55;115;55"    dur="5.0s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1180" cy="25"  r="1"   fill="#00ff41" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;0.05;0.7" dur="2.0s" repeatCount="indefinite"/>
+    <animate attributeName="cy"      values="25;95;25"     dur="4.0s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1360" cy="65"  r="1.5" fill="#38bdf8" opacity="0.4" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.4;0.1;0.4" dur="3.1s" repeatCount="indefinite"/>
+    <animate attributeName="cy"      values="65;110;65"    dur="6.2s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Glowing wave -->
+  <path d="M0,80 C180,40 360,100 540,60 C720,20 900,80 1080,50 C1260,20 1380,70 1440,55 L1440,120 L0,120 Z"
+        fill="url(#headerGrad)" opacity="0.5"/>
+  <!-- Terminal cursor blink in header -->
+  <rect x="670" y="52" width="8" height="16" fill="#00ff41" opacity="0.9">
+    <animate attributeName="opacity" values="0.9;0;0.9" dur="1s" repeatCount="indefinite"/>
+  </rect>
 </svg>
 
 </div>
 
-<!-- ██████████████████████████████████████████████████████████ -->
-<!--               QUICK BADGES & CTA ROW                      -->
-<!-- ██████████████████████████████████████████████████████████ -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--               CUSTOM SVG HERO BANNER                    -->
+<!-- ═══════════════════════════════════════════════════════ -->
+
+<div align="center">
+
+<svg width="860" height="280" viewBox="0 0 860 280" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- Backgrounds -->
+    <linearGradient id="bgMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#0d1117"/>
+      <stop offset="50%"  stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <!-- Neon cyan glow -->
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#38bdf8"/>
+      <stop offset="50%"  stop-color="#00ff41"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <!-- Purple accent -->
+    <linearGradient id="purpGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <!-- Glow filter -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Scanline pattern -->
+    <pattern id="scanlines" x="0" y="0" width="1" height="4" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="860" height="1" fill="rgba(0,255,65,0.03)"/>
+    </pattern>
+    <!-- Circuit pattern -->
+    <pattern id="circuit" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M10,30 L30,30 L30,10 M30,30 L50,30 M20,10 L20,20 M40,50 L40,40" 
+            stroke="#38bdf8" stroke-width="0.4" fill="none" opacity="0.15"/>
+      <circle cx="30" cy="30" r="2" fill="#38bdf8" opacity="0.1"/>
+      <circle cx="10" cy="30" r="1.5" fill="#00ff41" opacity="0.08"/>
+      <circle cx="50" cy="30" r="1.5" fill="#00ff41" opacity="0.08"/>
+      <circle cx="20" cy="10" r="1"   fill="#6366f1" opacity="0.1"/>
+      <circle cx="40" cy="50" r="1"   fill="#6366f1" opacity="0.1"/>
+    </pattern>
+    <!-- Clip path for rounded corners -->
+    <clipPath id="bannerClip">
+      <rect x="0" y="0" width="860" height="280" rx="16" ry="16"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#bannerClip)">
+    <!-- Base bg -->
+    <rect width="860" height="280" fill="url(#bgMain)"/>
+    <!-- Circuit overlay -->
+    <rect width="860" height="280" fill="url(#circuit)"/>
+    <!-- Scanlines overlay -->
+    <rect width="860" height="280" fill="url(#scanlines)"/>
+
+    <!-- Glowing orb top-right -->
+    <circle cx="780" cy="50" r="80" fill="#38bdf8" opacity="0.04" filter="url(#neonGlow)"/>
+    <circle cx="780" cy="50" r="50" fill="#6366f1" opacity="0.05" filter="url(#neonGlow)"/>
+    <!-- Glowing orb bottom-left -->
+    <circle cx="80"  cy="230" r="70" fill="#00ff41" opacity="0.03" filter="url(#neonGlow)"/>
+    <circle cx="80"  cy="230" r="40" fill="#38bdf8" opacity="0.04" filter="url(#neonGlow)"/>
+
+    <!-- Border glow -->
+    <rect x="1" y="1" width="858" height="278" rx="15" ry="15"
+          fill="none" stroke="url(#cyanGrad)" stroke-width="0.8" opacity="0.6" filter="url(#softGlow)"/>
+
+    <!-- Corner accents -->
+    <path d="M0,40 L0,0 L40,0"   fill="none" stroke="#00ff41" stroke-width="2" opacity="0.8"/>
+    <path d="M820,0 L860,0 L860,40"  fill="none" stroke="#00ff41" stroke-width="2" opacity="0.8"/>
+    <path d="M0,240 L0,280 L40,280"  fill="none" stroke="#00ff41" stroke-width="2" opacity="0.8"/>
+    <path d="M820,280 L860,280 L860,240" fill="none" stroke="#00ff41" stroke-width="2" opacity="0.8"/>
+
+    <!-- Corner dots -->
+    <circle cx="0"   cy="0"   r="4" fill="#00ff41" opacity="0.9" filter="url(#softGlow)">
+      <animate attributeName="opacity" values="0.9;0.3;0.9" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="860" cy="0"   r="4" fill="#38bdf8" opacity="0.9" filter="url(#softGlow)">
+      <animate attributeName="opacity" values="0.9;0.3;0.9" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0"   cy="280" r="4" fill="#6366f1" opacity="0.9" filter="url(#softGlow)">
+      <animate attributeName="opacity" values="0.9;0.3;0.9" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="860" cy="280" r="4" fill="#00ff41" opacity="0.9" filter="url(#softGlow)">
+      <animate attributeName="opacity" values="0.9;0.3;0.9" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Status bar top -->
+    <rect x="0" y="0" width="860" height="28" fill="rgba(0,0,0,0.4)"/>
+    <circle cx="22"  cy="14" r="5" fill="#ff5f57">
+      <animate attributeName="opacity" values="1;0.6;1" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="40"  cy="14" r="5" fill="#febc2e">
+      <animate attributeName="opacity" values="1;0.6;1" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="58"  cy="14" r="5" fill="#28c840">
+      <animate attributeName="opacity" values="1;0.6;1" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="430" y="18" fill="#38bdf8" font-size="9" font-family="'Courier New',monospace" text-anchor="middle" opacity="0.7">
+      ~/portfolio/sahal — bash — 120×30
+    </text>
+    <!-- Pulsing dot (live indicator) -->
+    <circle cx="820" cy="14" r="3.5" fill="#00ff41" opacity="0.9">
+      <animate attributeName="r"       values="3.5;5;3.5"   dur="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;0.3;0.9" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <text x="808" y="18" fill="#00ff41" font-size="8" font-family="'Courier New',monospace" text-anchor="end" opacity="0.7">LIVE</text>
+
+    <!-- Main title area -->
+    <!-- Name: SAHAL -->
+    <text x="430" y="100" fill="url(#cyanGrad)" font-size="64" font-family="'Courier New',monospace"
+          font-weight="900" text-anchor="middle" letter-spacing="12" filter="url(#neonGlow)" opacity="0.95">
+      SAHAL
+    </text>
+    <!-- Subtle echo / shadow -->
+    <text x="432" y="102" fill="#38bdf8" font-size="64" font-family="'Courier New',monospace"
+          font-weight="900" text-anchor="middle" letter-spacing="12" opacity="0.08">
+      SAHAL
+    </text>
+
+    <!-- Tag line -->
+    <text x="430" y="130" fill="#94a3b8" font-size="12" font-family="'Courier New',monospace"
+          text-anchor="middle" letter-spacing="6">
+      FULL-STACK DEVELOPER · INDONESIA
+    </text>
+
+    <!-- Animated underline -->
+    <line x1="230" y1="140" x2="630" y2="140" stroke="url(#cyanGrad)" stroke-width="1" opacity="0.5">
+      <animate attributeName="x1"      values="230;330;230" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="x2"      values="630;530;630" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;1;0.5"   dur="3s" repeatCount="indefinite"/>
+    </line>
+
+    <!-- Role badges -->
+    <rect x="200" y="155" width="120" height="22" rx="11" fill="rgba(56,189,248,0.1)" stroke="#38bdf8" stroke-width="0.8"/>
+    <text x="260" y="170" fill="#38bdf8" font-size="9" font-family="'Courier New',monospace" text-anchor="middle" letter-spacing="1">React · Laravel</text>
+
+    <rect x="340" y="155" width="100" height="22" rx="11" fill="rgba(99,102,241,0.1)" stroke="#6366f1" stroke-width="0.8"/>
+    <text x="390" y="170" fill="#6366f1" font-size="9" font-family="'Courier New',monospace" text-anchor="middle" letter-spacing="1">Python · ML</text>
+
+    <rect x="460" y="155" width="120" height="22" rx="11" fill="rgba(0,255,65,0.08)" stroke="#00ff41" stroke-width="0.8"/>
+    <text x="520" y="170" fill="#00ff41" font-size="9" font-family="'Courier New',monospace" text-anchor="middle" letter-spacing="1">Open Source 🔥</text>
+
+    <!-- Stats bar -->
+    <text x="430" y="215" fill="#475569" font-size="9" font-family="'Courier New',monospace" text-anchor="middle">
+      ── SYSTEM STATUS ─────────────────────────────────────────────
+    </text>
+
+    <!-- Stat items -->
+    <text x="170" y="240" fill="#64748b" font-size="9" font-family="'Courier New',monospace" text-anchor="middle">REPOS</text>
+    <text x="170" y="255" fill="#00ff41" font-size="14" font-family="'Courier New',monospace" text-anchor="middle" font-weight="bold" filter="url(#softGlow)">14+</text>
+
+    <line x1="245" y1="232" x2="245" y2="260" stroke="#1e293b" stroke-width="1"/>
+
+    <text x="315" y="240" fill="#64748b" font-size="9" font-family="'Courier New',monospace" text-anchor="middle">COMMITS</text>
+    <text x="315" y="255" fill="#38bdf8" font-size="14" font-family="'Courier New',monospace" text-anchor="middle" font-weight="bold" filter="url(#softGlow)">270+</text>
+
+    <line x1="390" y1="232" x2="390" y2="260" stroke="#1e293b" stroke-width="1"/>
+
+    <text x="430" y="240" fill="#64748b" font-size="9" font-family="'Courier New',monospace" text-anchor="middle">STARS</text>
+    <text x="430" y="255" fill="#6366f1" font-size="14" font-family="'Courier New',monospace" text-anchor="middle" font-weight="bold" filter="url(#softGlow)">14</text>
+
+    <line x1="475" y1="232" x2="475" y2="260" stroke="#1e293b" stroke-width="1"/>
+
+    <text x="545" y="240" fill="#64748b" font-size="9" font-family="'Courier New',monospace" text-anchor="middle">LOCATION</text>
+    <text x="545" y="255" fill="#f59e0b" font-size="11" font-family="'Courier New',monospace" text-anchor="middle" font-weight="bold">🇮🇩 INDONESIA</text>
+
+    <line x1="620" y1="232" x2="620" y2="260" stroke="#1e293b" stroke-width="1"/>
+
+    <text x="690" y="240" fill="#64748b" font-size="9" font-family="'Courier New',monospace" text-anchor="middle">STATUS</text>
+    <text x="690" y="255" fill="#00ff41" font-size="11" font-family="'Courier New',monospace" text-anchor="middle" font-weight="bold">● AVAILABLE</text>
+
+    <!-- Bottom separator -->
+    <line x1="40" y1="270" x2="820" y2="270" stroke="#1e293b" stroke-width="0.8" opacity="0.8"/>
+    <text x="430" y="278" fill="#334155" font-size="8" font-family="'Courier New',monospace" text-anchor="middle">
+      github.com/Sahal111 · X_proff · Building cool stuff since 2023
+    </text>
+  </g>
+</svg>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--                   TYPING ANIMATION                      -->
+<!-- ═══════════════════════════════════════════════════════ -->
+
+<div align="center">
+
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=20&duration=2800&pause=700&color=00FF41&background=0D111700&center=true&vCenter=true&multiline=false&width=700&lines=root%40Sahal111%3A~%24+whoami;Full-Stack+Developer+%F0%9F%9A%80;React+%7C+Laravel+%7C+Python+%7C+ML;Building+the+Future+from+Indonesia+%F0%9F%87%AE%F0%9F%87%A9;Open+Source+Enthusiast+%E2%9D%A4%EF%B8%8F;Always+learning%2C+always+building+%E2%9A%A1)](https://git.io/typing-svg)
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--                 VISITOR + SOCIAL BADGES                 -->
+<!-- ═══════════════════════════════════════════════════════ -->
 
 <div align="center">
 
 [![Profile Views](https://komarev.com/ghpvc/?username=Sahal111&style=for-the-badge&color=00ff41&labelColor=0d1117&label=PROFILE+VIEWS)](https://github.com/Sahal111)
-[![GitHub Followers](https://img.shields.io/github/followers/Sahal111?style=for-the-badge&color=38bdf8&labelColor=0d1117&label=FOLLOWERS)](https://github.com/Sahal111?tab=followers)
-[![GitHub Stars](https://img.shields.io/github/stars/Sahal111?style=for-the-badge&color=6366f1&labelColor=0d1117&label=TOTAL+STARS)](https://github.com/Sahal111)
+[![GitHub followers](https://img.shields.io/github/followers/Sahal111?style=for-the-badge&color=38bdf8&labelColor=0d1117&label=FOLLOWERS)](https://github.com/Sahal111?tab=followers)
+[![GitHub stars](https://img.shields.io/github/stars/Sahal111?style=for-the-badge&color=6366f1&labelColor=0d1117&label=TOTAL+STARS)](https://github.com/Sahal111)
 [![Status](https://img.shields.io/badge/STATUS-OPEN_FOR_COLLAB-00ff41?style=for-the-badge&labelColor=0d1117)](https://github.com/Sahal111)
 
 </div>
 
 <br/>
 
-<!-- ██████████████████████████████████████████████████████████ -->
-<!--                  TERMINAL SIMULATION                       -->
-<!-- ██████████████████████████████████████████████████████████ -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--            TERMINAL SIMULATION (whoami, etc.)           -->
+<!-- ═══════════════════════════════════════════════════════ -->
 
 <div align="center">
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 480" width="90%">
+<svg width="780" height="480" viewBox="0 0 780 480" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="termBg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0d1117"/>
-      <stop offset="100%" stop-color="#090c10"/>
+      <stop offset="0%"  stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#060d0d"/>
     </linearGradient>
     <filter id="termGlow">
-      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#1e293b"/>
-      <stop offset="100%" stop-color="#0f172a"/>
-    </linearGradient>
+    <clipPath id="termClip">
+      <rect x="0" y="0" width="780" height="480" rx="12" ry="12"/>
+    </clipPath>
   </defs>
 
-  <!-- Window frame -->
-  <rect width="820" height="480" fill="url(#termBg)" rx="12" stroke="#1e293b" stroke-width="1"/>
+  <g clip-path="url(#termClip)">
+    <!-- Terminal background -->
+    <rect width="780" height="480" fill="url(#termBg)"/>
 
-  <!-- Title bar -->
-  <rect width="820" height="36" fill="url(#headerGrad)" rx="12"/>
-  <rect y="24" width="820" height="12" fill="url(#headerGrad)"/>
+    <!-- Title bar -->
+    <rect x="0" y="0" width="780" height="36" fill="#161b22"/>
+    <rect x="0" y="36" width="780" height="1" fill="#21262d"/>
 
-  <!-- Traffic lights -->
-  <circle cx="20" cy="18" r="6" fill="#ff5f57"/>
-  <circle cx="38" cy="18" r="6" fill="#ffbd2e"/>
-  <circle cx="56" cy="18" r="6" fill="#28c840"/>
+    <!-- Traffic lights -->
+    <circle cx="22" cy="18" r="6" fill="#ff5f57"/>
+    <circle cx="42" cy="18" r="6" fill="#febc2e"/>
+    <circle cx="62" cy="18" r="6" fill="#28c840"/>
 
-  <!-- Terminal title -->
-  <text x="410" y="23" text-anchor="middle" font-family="'SF Mono', 'Courier New', monospace"
-        font-size="12" fill="#64748b">sahal@portfolio ~ zsh</text>
+    <!-- Terminal title -->
+    <text x="390" y="23" fill="#8b949e" font-size="12" font-family="'SF Mono','Courier New',monospace" text-anchor="middle">
+      bash — sahal111@matrix: ~/portfolio
+    </text>
 
-  <!-- Scanline overlay effect -->
-  <rect width="820" height="480" fill="none" rx="12"
-        style="background: repeating-linear-gradient(0deg,rgba(0,0,0,0.03) 0px,rgba(0,0,0,0.03) 1px,transparent 1px,transparent 2px)"/>
+    <!-- Tab indicator -->
+    <rect x="300" y="32" width="180" height="4" fill="#00ff41" rx="2">
+      <animate attributeName="opacity" values="1;0.5;1" dur="3s" repeatCount="indefinite"/>
+    </rect>
 
-  <!-- Terminal content -->
-  <g font-family="'SF Mono', 'Courier New', monospace" font-size="13" filter="url(#termGlow)">
+    <!-- ── LINE 1: prompt + whoami ── -->
+    <text x="24" y="72" font-family="'Courier New',monospace" font-size="13" fill="#00ff41" filter="url(#termGlow)">
+      <tspan fill="#6366f1">┌──(</tspan><tspan fill="#38bdf8">sahal111</tspan><tspan fill="#6366f1">㉿</tspan><tspan fill="#00ff41">matrix</tspan><tspan fill="#6366f1">)-[</tspan><tspan fill="#f59e0b">~/portfolio</tspan><tspan fill="#6366f1">]</tspan>
+    </text>
+    <text x="24" y="90" font-family="'Courier New',monospace" font-size="13" fill="#6366f1">
+      └─<tspan fill="#00ff41">$</tspan><tspan fill="#e2e8f0"> whoami</tspan>
+    </text>
+    <text x="24" y="110" font-family="'Courier New',monospace" font-size="13" fill="#94a3b8">
+      ► <tspan fill="#38bdf8">Sahal</tspan> — Full-Stack Developer &amp; ML Enthusiast from Indonesia 🇮🇩
+    </text>
+    <text x="24" y="128" font-family="'Courier New',monospace" font-size="12" fill="#64748b">
+      <tspan fill="#00ff41">  ✓</tspan> Laravel · React · Python · MySQL · TailwindCSS
+    </text>
+    <text x="24" y="146" font-family="'Courier New',monospace" font-size="12" fill="#64748b">
+      <tspan fill="#00ff41">  ✓</tspan> 270+ commits · 14 repos · Open for collaboration
+    </text>
 
-    <!-- Line 1: prompt + whoami -->
-    <text x="20" y="68" fill="#6366f1">sahal</text>
-    <text x="64" y="68" fill="#94a3b8">@</text>
-    <text x="76" y="68" fill="#38bdf8">portfolio</text>
-    <text x="154" y="68" fill="#64748b"> ~ </text>
-    <text x="175" y="68" fill="#22c55e">❯</text>
-    <text x="190" y="68" fill="#e2e8f0"> whoami</text>
+    <!-- Separator -->
+    <line x1="24" y1="158" x2="756" y2="158" stroke="#21262d" stroke-width="0.8"/>
 
-    <!-- whoami output -->
-    <text x="20" y="92" fill="#94a3b8">╭─────────────────────────────────────────────────────────────────╮</text>
-    <text x="20" y="110" fill="#94a3b8">│</text>
-    <text x="34" y="110" fill="#38bdf8">  👤 Name   :</text>
-    <text x="166" y="110" fill="#e2e8f0"> Sahal (X_ proff)</text>
-    <text x="20" y="128" fill="#94a3b8">│</text>
-    <text x="34" y="128" fill="#38bdf8">  🌏 Origin :</text>
-    <text x="166" y="128" fill="#e2e8f0"> Indonesia 🇮🇩</text>
-    <text x="20" y="146" fill="#94a3b8">│</text>
-    <text x="34" y="146" fill="#38bdf8">  💼 Role   :</text>
-    <text x="166" y="146" fill="#e2e8f0"> Fullstack Developer + ML Engineer</text>
-    <text x="20" y="164" fill="#94a3b8">│</text>
-    <text x="34" y="164" fill="#38bdf8">  🎓 Edu    :</text>
-    <text x="166" y="164" fill="#e2e8f0"> Computer Science</text>
-    <text x="20" y="182" fill="#94a3b8">│</text>
-    <text x="34" y="182" fill="#38bdf8">  ⚡ Status :</text>
-    <text x="166" y="182" fill="#22c55e"> ● Open for collab &amp; freelance</text>
-    <text x="20" y="200" fill="#94a3b8">╰─────────────────────────────────────────────────────────────────╯</text>
+    <!-- ── LINE 2: skills ── -->
+    <text x="24" y="178" font-family="'Courier New',monospace" font-size="13" fill="#6366f1">
+      └─<tspan fill="#00ff41">$</tspan><tspan fill="#e2e8f0"> cat skills.json</tspan>
+    </text>
+    <text x="24" y="196" font-family="'Courier New',monospace" font-size="11" fill="#64748b">{</text>
+    <text x="40" y="212" font-family="'Courier New',monospace" font-size="11">
+      <tspan fill="#6366f1">"frontend"</tspan><tspan fill="#94a3b8">: [</tspan>
+      <tspan fill="#f59e0b">"React"</tspan><tspan fill="#94a3b8">, </tspan>
+      <tspan fill="#f59e0b">"Next.js"</tspan><tspan fill="#94a3b8">, </tspan>
+      <tspan fill="#f59e0b">"TailwindCSS"</tspan><tspan fill="#94a3b8">, </tspan>
+      <tspan fill="#f59e0b">"TypeScript"</tspan><tspan fill="#94a3b8">],</tspan>
+    </text>
+    <text x="40" y="228" font-family="'Courier New',monospace" font-size="11">
+      <tspan fill="#6366f1">"backend"</tspan><tspan fill="#94a3b8">: [</tspan>
+      <tspan fill="#f59e0b">"Laravel"</tspan><tspan fill="#94a3b8">, </tspan>
+      <tspan fill="#f59e0b">"PHP"</tspan><tspan fill="#94a3b8">, </tspan>
+      <tspan fill="#f59e0b">"Node.js"</tspan><tspan fill="#94a3b8">, </tspan>
+      <tspan fill="#f59e0b">"Python"</tspan><tspan fill="#94a3b8">],</tspan>
+    </text>
+    <text x="40" y="244" font-family="'Courier New',monospace" font-size="11">
+      <tspan fill="#6366f1">"database"</tspan><tspan fill="#94a3b8">: [</tspan>
+      <tspan fill="#f59e0b">"MySQL"</tspan><tspan fill="#94a3b8">, </tspan>
+      <tspan fill="#f59e0b">"PostgreSQL"</tspan><tspan fill="#94a3b8">],</tspan>
+    </text>
+    <text x="40" y="260" font-family="'Courier New',monospace" font-size="11">
+      <tspan fill="#6366f1">"ai_ml"</tspan><tspan fill="#94a3b8">: [</tspan>
+      <tspan fill="#f59e0b">"scikit-learn"</tspan><tspan fill="#94a3b8">, </tspan>
+      <tspan fill="#f59e0b">"Pandas"</tspan><tspan fill="#94a3b8">, </tspan>
+      <tspan fill="#f59e0b">"Jupyter"</tspan><tspan fill="#94a3b8">],</tspan>
+    </text>
+    <text x="40" y="276" font-family="'Courier New',monospace" font-size="11">
+      <tspan fill="#6366f1">"tools"</tspan><tspan fill="#94a3b8">: [</tspan>
+      <tspan fill="#f59e0b">"Git"</tspan><tspan fill="#94a3b8">, </tspan>
+      <tspan fill="#f59e0b">"VS Code"</tspan><tspan fill="#94a3b8">, </tspan>
+      <tspan fill="#f59e0b">"Figma"</tspan><tspan fill="#94a3b8">, </tspan>
+      <tspan fill="#f59e0b">"Postman"</tspan><tspan fill="#94a3b8">]</tspan>
+    </text>
+    <text x="24" y="292" font-family="'Courier New',monospace" font-size="11" fill="#64748b">}</text>
 
-    <!-- Line 2: prompt + skills -->
-    <text x="20" y="226" fill="#6366f1">sahal</text>
-    <text x="64" y="226" fill="#94a3b8">@</text>
-    <text x="76" y="226" fill="#38bdf8">portfolio</text>
-    <text x="154" y="226" fill="#64748b"> ~ </text>
-    <text x="175" y="226" fill="#22c55e">❯</text>
-    <text x="190" y="226" fill="#e2e8f0"> cat skills.json</text>
+    <!-- Separator -->
+    <line x1="24" y1="302" x2="756" y2="302" stroke="#21262d" stroke-width="0.8"/>
 
-    <!-- skills output -->
-    <text x="20" y="248" fill="#94a3b8">{</text>
-    <text x="34" y="264" fill="#6366f1">"languages"</text>
-    <text x="124" y="264" fill="#94a3b8">:</text>
-    <text x="136" y="264" fill="#22c55e"> ["PHP", "Python", "JavaScript", "TypeScript"],</text>
-    <text x="34" y="280" fill="#6366f1">"frontend"</text>
-    <text x="118" y="280" fill="#94a3b8">:</text>
-    <text x="130" y="280" fill="#22c55e"> ["React", "TailwindCSS", "HTML5", "CSS3"],</text>
-    <text x="34" y="296" fill="#6366f1">"backend"</text>
-    <text x="116" y="296" fill="#94a3b8">:</text>
-    <text x="128" y="296" fill="#22c55e"> ["Laravel", "Node.js", "REST API"],</text>
-    <text x="34" y="312" fill="#6366f1">"ml_ai"</text>
-    <text x="100" y="312" fill="#94a3b8">:</text>
-    <text x="112" y="312" fill="#22c55e"> ["scikit-learn", "Pandas", "Jupyter", "NumPy"],</text>
-    <text x="34" y="328" fill="#6366f1">"tools"</text>
-    <text x="100" y="328" fill="#94a3b8">:</text>
-    <text x="112" y="328" fill="#22c55e"> ["Git", "Docker", "VS Code", "Postman", "Figma"]</text>
-    <text x="20" y="344" fill="#94a3b8">}</text>
+    <!-- ── LINE 3: projects ── -->
+    <text x="24" y="320" font-family="'Courier New',monospace" font-size="13" fill="#6366f1">
+      └─<tspan fill="#00ff41">$</tspan><tspan fill="#e2e8f0"> ls projects/ --color</tspan>
+    </text>
+    <text x="24" y="338" font-family="'Courier New',monospace" font-size="12">
+      <tspan fill="#38bdf8">sneakershead/</tspan><tspan fill="#475569">     </tspan>
+      <tspan fill="#38bdf8">UTS_ML_Sahal/</tspan><tspan fill="#475569">     </tspan>
+      <tspan fill="#38bdf8">RPL_Group1/</tspan>
+    </text>
+    <text x="24" y="356" font-family="'Courier New',monospace" font-size="12">
+      <tspan fill="#f59e0b">Challenge_Frontend/</tspan><tspan fill="#475569">  </tspan>
+      <tspan fill="#6366f1">[WIP]</tspan><tspan fill="#38bdf8"> school-erp/</tspan><tspan fill="#475569">   </tspan>
+      <tspan fill="#6366f1">[WIP]</tspan><tspan fill="#38bdf8"> ai-project/</tspan>
+    </text>
 
-    <!-- Line 3: prompt + status -->
-    <text x="20" y="368" fill="#6366f1">sahal</text>
-    <text x="64" y="368" fill="#94a3b8">@</text>
-    <text x="76" y="368" fill="#38bdf8">portfolio</text>
-    <text x="154" y="368" fill="#64748b"> ~ </text>
-    <text x="175" y="368" fill="#22c55e">❯</text>
-    <text x="190" y="368" fill="#e2e8f0"> ./status --now</text>
+    <!-- Separator -->
+    <line x1="24" y1="368" x2="756" y2="368" stroke="#21262d" stroke-width="0.8"/>
 
-    <!-- status output -->
-    <text x="20" y="390" fill="#38bdf8">🚀</text>
-    <text x="38" y="390" fill="#e2e8f0"> Building School ERP (Laravel + React)</text>
-    <text x="20" y="406" fill="#6366f1">🧠</text>
-    <text x="38" y="406" fill="#e2e8f0"> Exploring Deep Learning &amp; AI Engineering</text>
-    <text x="20" y="422" fill="#14b8a6">📦</text>
-    <text x="38" y="422" fill="#e2e8f0"> 270+ commits in 2026  ·  14 public repos</text>
+    <!-- ── LINE 4: status ── -->
+    <text x="24" y="386" font-family="'Courier New',monospace" font-size="13" fill="#6366f1">
+      └─<tspan fill="#00ff41">$</tspan><tspan fill="#e2e8f0"> status --verbose</tspan>
+    </text>
+    <text x="24" y="404" font-family="'Courier New',monospace" font-size="12" fill="#94a3b8">
+      <tspan fill="#00ff41">  [ON]</tspan>  Currently building: <tspan fill="#38bdf8">School ERP System</tspan>
+    </text>
+    <text x="24" y="420" font-family="'Courier New',monospace" font-size="12" fill="#94a3b8">
+      <tspan fill="#00ff41">  [ON]</tspan>  Learning: <tspan fill="#6366f1">AI/ML · Clean Architecture · Docker</tspan>
+    </text>
+    <text x="24" y="436" font-family="'Courier New',monospace" font-size="12" fill="#94a3b8">
+      <tspan fill="#00ff41">  [ON]</tspan>  Open to: <tspan fill="#f59e0b">Collaboration · Freelance · Internship</tspan>
+    </text>
 
-    <!-- blinking cursor -->
-    <text x="20" y="450" fill="#6366f1">sahal</text>
-    <text x="64" y="450" fill="#94a3b8">@</text>
-    <text x="76" y="450" fill="#38bdf8">portfolio</text>
-    <text x="154" y="450" fill="#64748b"> ~ </text>
-    <text x="175" y="450" fill="#22c55e">❯</text>
-    <rect x="192" y="437" width="8" height="14" fill="#38bdf8">
-      <animate attributeName="opacity" values="1;0;1" dur="1.2s" repeatCount="indefinite"/>
+    <!-- Blinking cursor -->
+    <text x="24" y="460" font-family="'Courier New',monospace" font-size="13" fill="#6366f1">
+      └─<tspan fill="#00ff41">$</tspan><tspan fill="#e2e8f0"> _</tspan>
+    </text>
+    <rect x="60" y="448" width="8" height="14" fill="#00ff41" filter="url(#termGlow)">
+      <animate attributeName="opacity" values="1;0;1" dur="1.1s" repeatCount="indefinite"/>
     </rect>
   </g>
 </svg>
@@ -318,147 +451,149 @@
 
 <br/>
 
-<!-- ██████████████████████████████████████████████████████████ -->
-<!--             COMMAND PALETTE — RAYCAST STYLE                -->
-<!-- ██████████████████████████████████████████████████████████ -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--              COMMAND PALETTE (Raycast style)            -->
+<!-- ═══════════════════════════════════════════════════════ -->
 
 <div align="center">
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 320" width="80%">
+<svg width="580" height="260" viewBox="0 0 580 260" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="palBg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#111827"/>
-      <stop offset="100%" stop-color="#0f172a"/>
+      <stop offset="0%"  stop-color="#161b22"/>
+      <stop offset="100%" stop-color="#0d1117"/>
     </linearGradient>
-    <filter id="softGlow">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
+    <filter id="palGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <linearGradient id="activeRow" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#1e3a5f" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#1e1b4b" stop-opacity="0.3"/>
-    </linearGradient>
+    <clipPath id="palClip">
+      <rect x="0" y="0" width="580" height="260" rx="14" ry="14"/>
+    </clipPath>
   </defs>
 
-  <!-- Outer glow ring -->
-  <rect x="2" y="2" width="696" height="316" rx="14" fill="none"
-        stroke="url(#textGrad)" stroke-width="0.8" opacity="0.4"/>
+  <g clip-path="url(#palClip)">
+    <rect width="580" height="260" fill="url(#palBg)"/>
+    <!-- Outer glow border -->
+    <rect x="1" y="1" width="578" height="258" rx="13" ry="13"
+          fill="none" stroke="#38bdf8" stroke-width="0.8" opacity="0.5" filter="url(#palGlow)"/>
 
-  <!-- Window -->
-  <rect width="700" height="320" rx="14" fill="url(#palBg)" stroke="#1e293b" stroke-width="1"/>
+    <!-- Search bar -->
+    <rect x="16" y="16" width="548" height="42" rx="8" fill="#21262d"/>
+    <rect x="16" y="16" width="548" height="42" rx="8" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.4"/>
+    <!-- Command prefix -->
+    <text x="36" y="43" font-family="'Courier New',monospace" font-size="16" fill="#6366f1" font-weight="bold">⌘</text>
+    <text x="58" y="43" font-family="'Courier New',monospace" font-size="14" fill="#94a3b8">&gt; Type a command...</text>
+    <!-- Placeholder cursor -->
+    <rect x="228" y="26" width="2" height="20" fill="#38bdf8">
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Keyboard shortcut hint -->
+    <rect x="508" y="26" width="40" height="22" rx="4" fill="#161b22" stroke="#334155" stroke-width="1"/>
+    <text x="528" y="41" font-family="'Courier New',monospace" font-size="10" fill="#475569" text-anchor="middle">ESC</text>
 
-  <!-- Search input bar -->
-  <rect x="16" y="16" width="668" height="44" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
-  <!-- Search icon -->
-  <text x="36" y="44" font-size="16" fill="#64748b">⌘</text>
-  <!-- Input text -->
-  <text x="58" y="44" font-family="'SF Mono','Courier New',monospace" font-size="14" fill="#e2e8f0">&gt; </text>
-  <text x="76" y="44" font-family="'SF Mono','Courier New',monospace" font-size="14" fill="#94a3b8">Type a command...</text>
-  <!-- Keyboard hint -->
-  <text x="630" y="44" font-family="'SF Mono','Courier New',monospace" font-size="11" fill="#475569">ESC</text>
-  <rect x="622" y="30" width="34" height="18" rx="4" fill="none" stroke="#475569" stroke-width="1"/>
+    <!-- Separator -->
+    <line x1="16" y1="68" x2="564" y2="68" stroke="#21262d" stroke-width="1"/>
 
-  <!-- Divider -->
-  <line x1="16" y1="68" x2="684" y2="68" stroke="#1e293b" stroke-width="1"/>
+    <!-- Section label -->
+    <text x="28" y="86" font-family="'SF Pro','Helvetica',monospace" font-size="10" fill="#475569" letter-spacing="2">QUICK COMMANDS</text>
 
-  <!-- Category label -->
-  <text x="24" y="88" font-family="'SF Mono','Courier New',monospace" font-size="10"
-        fill="#475569" letter-spacing="2">QUICK ACTIONS</text>
+    <!-- Command item 1: about -->
+    <rect x="16" y="92" width="548" height="38" rx="6" fill="#38bdf8" opacity="0.05"/>
+    <rect x="16" y="92" width="3" height="38" rx="1" fill="#38bdf8"/>
+    <text x="34" y="107" font-family="'Courier New',monospace" font-size="12" fill="#00ff41">▶</text>
+    <text x="50" y="107" font-family="'Courier New',monospace" font-size="13" fill="#e2e8f0">about</text>
+    <text x="50" y="122" font-family="'Courier New',monospace" font-size="10" fill="#475569">Open Sahal's profile and background</text>
+    <rect x="520" y="100" width="36" height="20" rx="4" fill="#161b22" stroke="#334155" stroke-width="1"/>
+    <text x="538" y="114" font-family="'Courier New',monospace" font-size="9" fill="#38bdf8" text-anchor="middle">↵</text>
 
-  <!-- Command item 1 — ACTIVE -->
-  <rect x="12" y="96" width="676" height="44" rx="6" fill="url(#activeRow)"/>
-  <rect x="12" y="96" width="3" height="44" rx="2" fill="#38bdf8"/>
-  <text x="30" y="113" font-size="16">👤</text>
-  <text x="52" y="113" font-family="'SF Mono','Courier New',monospace" font-size="13" fill="#e2e8f0">about</text>
-  <text x="52" y="130" font-family="'SF Mono','Courier New',monospace" font-size="11" fill="#64748b">View profile, skills and background</text>
-  <text x="600" y="122" font-family="'SF Mono','Courier New',monospace" font-size="10" fill="#38bdf8">ENTER ↵</text>
+    <!-- Command item 2: projects -->
+    <rect x="16" y="136" width="548" height="38" rx="6" fill="transparent"/>
+    <text x="34" y="151" font-family="'Courier New',monospace" font-size="12" fill="#6366f1">▶</text>
+    <text x="50" y="151" font-family="'Courier New',monospace" font-size="13" fill="#94a3b8">projects</text>
+    <text x="50" y="166" font-family="'Courier New',monospace" font-size="10" fill="#475569">Browse all featured repositories</text>
+    <rect x="518" y="143" width="42" height="20" rx="4" fill="#161b22" stroke="#21262d" stroke-width="1"/>
+    <text x="539" y="157" font-family="'Courier New',monospace" font-size="9" fill="#475569" text-anchor="middle">⌘ P</text>
 
-  <!-- Command item 2 -->
-  <rect x="12" y="148" width="676" height="44" rx="6" fill="#0f172a"/>
-  <text x="30" y="165" font-size="16">🗂</text>
-  <text x="52" y="165" font-family="'SF Mono','Courier New',monospace" font-size="13" fill="#94a3b8">projects</text>
-  <text x="52" y="182" font-family="'SF Mono','Courier New',monospace" font-size="11" fill="#475569">Browse pinned repos and featured work</text>
+    <!-- Command item 3: contact -->
+    <rect x="16" y="180" width="548" height="38" rx="6" fill="transparent"/>
+    <text x="34" y="195" font-family="'Courier New',monospace" font-size="12" fill="#f59e0b">▶</text>
+    <text x="50" y="195" font-family="'Courier New',monospace" font-size="13" fill="#94a3b8">contact</text>
+    <text x="50" y="210" font-family="'Courier New',monospace" font-size="10" fill="#475569">Reach out for collaboration</text>
+    <rect x="518" y="187" width="42" height="20" rx="4" fill="#161b22" stroke="#21262d" stroke-width="1"/>
+    <text x="539" y="201" font-family="'Courier New',monospace" font-size="9" fill="#475569" text-anchor="middle">⌘ K</text>
 
-  <!-- Command item 3 -->
-  <rect x="12" y="200" width="676" height="44" rx="6" fill="#0f172a"/>
-  <text x="30" y="217" font-size="16">📬</text>
-  <text x="52" y="217" font-family="'SF Mono','Courier New',monospace" font-size="13" fill="#94a3b8">contact</text>
-  <text x="52" y="234" font-family="'SF Mono','Courier New',monospace" font-size="11" fill="#475569">Email · LinkedIn · Instagram</text>
-
-  <!-- Command item 4 -->
-  <rect x="12" y="252" width="676" height="44" rx="6" fill="#0f172a"/>
-  <text x="30" y="269" font-size="16">📊</text>
-  <text x="52" y="269" font-family="'SF Mono','Courier New',monospace" font-size="13" fill="#94a3b8">stats</text>
-  <text x="52" y="286" font-family="'SF Mono','Courier New',monospace" font-size="11" fill="#475569">GitHub analytics, streaks and trophies</text>
-
-  <!-- Bottom bar -->
-  <line x1="16" y1="302" x2="684" y2="302" stroke="#1e293b" stroke-width="1"/>
-  <text x="24" y="316" font-family="'SF Mono','Courier New',monospace" font-size="10" fill="#334155">
-    ↑↓ navigate  ·  ↵ select  ·  ⌘K to open
-  </text>
-  <text x="580" y="316" font-family="'SF Mono','Courier New',monospace" font-size="10" fill="#334155">
-    v3.0-sahal
-  </text>
+    <!-- Footer hint -->
+    <line x1="16" y1="226" x2="564" y2="226" stroke="#21262d" stroke-width="1"/>
+    <text x="28" y="246" font-family="'Courier New',monospace" font-size="9" fill="#334155">↑↓ navigate</text>
+    <text x="120" y="246" font-family="'Courier New',monospace" font-size="9" fill="#334155">↵ select</text>
+    <text x="196" y="246" font-family="'Courier New',monospace" font-size="9" fill="#334155">ESC close</text>
+    <text x="480" y="246" font-family="'Courier New',monospace" font-size="9" fill="#38bdf8" text-anchor="end" filter="url(#palGlow)">Sahal Command Palette ⚡</text>
+  </g>
 </svg>
 
 </div>
 
 <br/>
 
-<!-- ██████████████████████████████████████████████████████████ -->
-<!--                      ABOUT ME                             -->
-<!-- ██████████████████████████████████████████████████████████ -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--                    SVG DIVIDER                          -->
+<!-- ═══════════════════════════════════════════════════════ -->
 
 <div align="center">
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 36" width="90%">
+<svg width="100%" height="3" viewBox="0 0 800 3" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
   <defs>
-    <linearGradient id="divGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0f172a" stop-opacity="0"/>
-      <stop offset="20%" stop-color="#38bdf8"/>
-      <stop offset="50%" stop-color="#6366f1"/>
-      <stop offset="80%" stop-color="#14b8a6"/>
-      <stop offset="100%" stop-color="#0f172a" stop-opacity="0"/>
+    <linearGradient id="divGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#0d1117" stop-opacity="0"/>
+      <stop offset="20%"  stop-color="#38bdf8"/>
+      <stop offset="50%"  stop-color="#00ff41"/>
+      <stop offset="80%"  stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <line x1="0" y1="18" x2="820" y2="18" stroke="url(#divGrad1)" stroke-width="1"/>
-  <polygon points="410,4 418,18 410,32 402,18" fill="#38bdf8" opacity="0.8"/>
-  <text x="410" y="22" text-anchor="middle" font-family="monospace" font-size="9"
-        fill="#0f172a" font-weight="bold">✦</text>
+  <rect width="800" height="1" y="1" fill="url(#divGrad)"/>
 </svg>
-
 </div>
 
 <br/>
 
-## 🧬 `> about --me`
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--                    ABOUT ME                             -->
+<!-- ═══════════════════════════════════════════════════════ -->
 
-<table>
+<h2 align="center">
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People/Technologist.png" width="28"/> &nbsp;About Me
+</h2>
+
+<table align="center" width="90%">
 <tr>
 <td width="55%" valign="top">
 
-```typescript
-const sahal: Developer = {
-  name:      "Sahal (X_ proff)",
-  location:  "Indonesia 🇮🇩",
-  role:      "Fullstack Developer",
-  education: "Computer Science",
+```yaml
+# sahal.config.yml
+─────────────────────────────────────
+name:        "Sahal (X_proff)"
+alias:       "Sahal111"
+location:    "Indonesia 🇮🇩"
+role:        "Full-Stack Developer"
+─────────────────────────────────────
+languages:
+  primary:   ["PHP", "JavaScript"]
+  secondary: ["Python", "TypeScript"]
+  learning:  ["Go", "Rust"]
 
-  philosophy: [
-    "Code is craft, not just function",
-    "Clean architecture over clever hacks",
-    "Ship fast · Iterate · Improve",
-  ],
+frameworks:
+  love:      ["Laravel", "React"]
+  exploring: ["Next.js", "FastAPI"]
 
-  currentlyBuilding: "School ERP System",
-  currentlyLearning: ["Deep Learning", "AI Engineering"],
-
-  funFact: "I debug with console.log()  
-            and I'm not ashamed 😄",
-
-  coffee: ☕ × ∞,
-  openForWork: true,
-};
+focus_2025:
+  - School ERP System (Laravel + React)
+  - Machine Learning with Python
+  - Clean Architecture & TDD
+  - Open Source Contributions
+─────────────────────────────────────
+availability: "Open for collaboration ✅"
+coffee:       "☕ Required before 10am"
 ```
 
 </td>
@@ -466,23 +601,28 @@ const sahal: Developer = {
 
 <br/>
 
-**🔥 Currently Focused On**
+🚀 &nbsp;**Passionate** about building elegant solutions with clean code
 
-> 🚀 School ERP — Laravel + React + MySQL  
-> 🧠 Deep Learning & AI Engineering  
-> ⚡ Building clean, scalable fullstack apps  
-> 📐 System Design & Clean Architecture  
-> 🌐 Open Source contribution
+🧠 &nbsp;**Currently** deep diving into AI/ML and fullstack architecture
+
+⚡ &nbsp;**Believer** in writing code that is readable, testable, scalable
+
+🎓 &nbsp;**CS Student** hustling every day to level up
+
+🌏 &nbsp;**Building** from Indonesia for the world
+
+🔥 &nbsp;**Fun fact:** I debug faster with lo-fi music on 🎵
+
+💡 &nbsp;**Philosophy:** `"Code is poetry, ship it with intention"`
 
 <br/>
 
-**🎯 2026 Goals**
+**Let's Connect:**
 
-> ✅ 300+ GitHub contributions  
-> 🔲 Launch SaaS product  
-> 🔲 Contribute to major OSS  
-> 🔲 Land Software Engineer role  
-> 🔲 Publish tech blog posts
+[![GitHub](https://img.shields.io/badge/GitHub-Sahal111-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Sahal111)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-sahal111-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/sahal111)
+[![Instagram](https://img.shields.io/badge/Instagram-X__proff-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://instagram.com/sahal111)
+[![Email](https://img.shields.io/badge/Gmail-contact-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:sahal@gmail.com)
 
 </td>
 </tr>
@@ -490,870 +630,983 @@ const sahal: Developer = {
 
 <br/>
 
-<!-- ██████████████████████████████████████████████████████████ -->
-<!--           TECH STACK — SKILLICONS.DEV                     -->
-<!-- ██████████████████████████████████████████████████████████ -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--                  CURRENT FOCUS CARDS                    -->
+<!-- ═══════════════════════════════════════════════════════ -->
 
 <div align="center">
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 36" width="90%">
-  <line x1="0" y1="18" x2="820" y2="18" stroke="url(#divGrad1)" stroke-width="1"/>
-  <polygon points="410,4 418,18 410,32 402,18" fill="#6366f1" opacity="0.8"/>
+<svg width="780" height="130" viewBox="0 0 780 130" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="card1bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"  stop-color="#0d2818"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="card2bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"  stop-color="#1a0d2e"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="card3bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"  stop-color="#0d1a2e"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="card4bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"  stop-color="#2e1a0d"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <filter id="cardGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Card 1: Building -->
+  <rect x="0"   y="15" width="182" height="100" rx="10" fill="url(#card1bg)"/>
+  <rect x="0"   y="15" width="182" height="100" rx="10" fill="none" stroke="#00ff41" stroke-width="0.8" opacity="0.6"/>
+  <rect x="0"   y="15" width="3"   height="100" rx="2" fill="#00ff41" filter="url(#cardGlow)"/>
+  <text x="20" y="45" font-family="'Courier New',monospace" font-size="20">🚀</text>
+  <text x="48" y="45" font-family="'Courier New',monospace" font-size="10" fill="#00ff41" font-weight="bold" letter-spacing="1">BUILDING</text>
+  <text x="20" y="65" font-family="'Courier New',monospace" font-size="11" fill="#e2e8f0">School ERP</text>
+  <text x="20" y="82" font-family="'Courier New',monospace" font-size="10" fill="#64748b">Laravel + React</text>
+  <!-- Progress bar -->
+  <rect x="20"  y="95" width="144" height="4" rx="2" fill="#21262d"/>
+  <rect x="20"  y="95" width="90"  height="4" rx="2" fill="#00ff41" opacity="0.8">
+    <animate attributeName="width" from="0" to="90" dur="2s" fill="freeze"/>
+  </rect>
+  <text x="168" y="100" font-family="'Courier New',monospace" font-size="8" fill="#00ff41" text-anchor="end">62%</text>
+
+  <!-- Card 2: Learning -->
+  <rect x="198" y="15" width="182" height="100" rx="10" fill="url(#card2bg)"/>
+  <rect x="198" y="15" width="182" height="100" rx="10" fill="none" stroke="#6366f1" stroke-width="0.8" opacity="0.6"/>
+  <rect x="198" y="15" width="3"   height="100" rx="2" fill="#6366f1" filter="url(#cardGlow)"/>
+  <text x="218" y="45" font-family="'Courier New',monospace" font-size="20">🧠</text>
+  <text x="246" y="45" font-family="'Courier New',monospace" font-size="10" fill="#6366f1" font-weight="bold" letter-spacing="1">LEARNING</text>
+  <text x="218" y="65" font-family="'Courier New',monospace" font-size="11" fill="#e2e8f0">AI / ML</text>
+  <text x="218" y="82" font-family="'Courier New',monospace" font-size="10" fill="#64748b">Python · scikit-learn</text>
+  <rect x="218" y="95" width="144" height="4" rx="2" fill="#21262d"/>
+  <rect x="218" y="95" width="72"  height="4" rx="2" fill="#6366f1" opacity="0.8">
+    <animate attributeName="width" from="0" to="72" dur="2.5s" fill="freeze"/>
+  </rect>
+  <text x="366" y="100" font-family="'Courier New',monospace" font-size="8" fill="#6366f1" text-anchor="end">50%</text>
+
+  <!-- Card 3: Exploring -->
+  <rect x="396" y="15" width="182" height="100" rx="10" fill="url(#card3bg)"/>
+  <rect x="396" y="15" width="182" height="100" rx="10" fill="none" stroke="#38bdf8" stroke-width="0.8" opacity="0.6"/>
+  <rect x="396" y="15" width="3"   height="100" rx="2" fill="#38bdf8" filter="url(#cardGlow)"/>
+  <text x="416" y="45" font-family="'Courier New',monospace" font-size="20">⚡</text>
+  <text x="444" y="45" font-family="'Courier New',monospace" font-size="10" fill="#38bdf8" font-weight="bold" letter-spacing="1">EXPLORING</text>
+  <text x="416" y="65" font-family="'Courier New',monospace" font-size="11" fill="#e2e8f0">Clean Architecture</text>
+  <text x="416" y="82" font-family="'Courier New',monospace" font-size="10" fill="#64748b">TDD · SOLID · DDD</text>
+  <rect x="416" y="95" width="144" height="4" rx="2" fill="#21262d"/>
+  <rect x="416" y="95" width="108" height="4" rx="2" fill="#38bdf8" opacity="0.8">
+    <animate attributeName="width" from="0" to="108" dur="3s" fill="freeze"/>
+  </rect>
+  <text x="564" y="100" font-family="'Courier New',monospace" font-size="8" fill="#38bdf8" text-anchor="end">75%</text>
+
+  <!-- Card 4: Goal -->
+  <rect x="594" y="15" width="182" height="100" rx="10" fill="url(#card4bg)"/>
+  <rect x="594" y="15" width="182" height="100" rx="10" fill="none" stroke="#f59e0b" stroke-width="0.8" opacity="0.6"/>
+  <rect x="594" y="15" width="3"   height="100" rx="2" fill="#f59e0b" filter="url(#cardGlow)"/>
+  <text x="614" y="45" font-family="'Courier New',monospace" font-size="20">🎯</text>
+  <text x="642" y="45" font-family="'Courier New',monospace" font-size="10" fill="#f59e0b" font-weight="bold" letter-spacing="1">GOAL 2026</text>
+  <text x="614" y="65" font-family="'Courier New',monospace" font-size="11" fill="#e2e8f0">Software Engineer</text>
+  <text x="614" y="82" font-family="'Courier New',monospace" font-size="10" fill="#64748b">Full Stack · AI Track</text>
+  <rect x="614" y="95" width="144" height="4" rx="2" fill="#21262d"/>
+  <rect x="614" y="95" width="36"  height="4" rx="2" fill="#f59e0b" opacity="0.8">
+    <animate attributeName="width" from="0" to="36" dur="1.5s" fill="freeze"/>
+  </rect>
+  <text x="762" y="100" font-family="'Courier New',monospace" font-size="8" fill="#f59e0b" text-anchor="end">25%</text>
 </svg>
-
-</div>
-
-## ⚡ `> cat tech_stack.json`
-
-<div align="center">
-
-**`[ LANGUAGES ]`**
-
-[![Languages](https://skillicons.dev/icons?i=php,python,js,ts,html,css&theme=dark&perline=8)](https://skillicons.dev)
-
-**`[ FRONTEND ]`**
-
-[![Frontend](https://skillicons.dev/icons?i=react,nextjs,tailwind,vite,sass,bootstrap&theme=dark&perline=8)](https://skillicons.dev)
-
-**`[ BACKEND ]`**
-
-[![Backend](https://skillicons.dev/icons?i=laravel,nodejs,express,php&theme=dark&perline=8)](https://skillicons.dev)
-
-**`[ DATABASE ]`**
-
-[![Database](https://skillicons.dev/icons?i=mysql,postgresql,sqlite,redis&theme=dark&perline=8)](https://skillicons.dev)
-
-**`[ AI / ML ]`**
-
-[![AI](https://skillicons.dev/icons?i=pytorch,tensorflow,sklearn,opencv&theme=dark&perline=8)](https://skillicons.dev)
-
-**`[ DEVOPS & TOOLS ]`**
-
-[![DevOps](https://skillicons.dev/icons?i=git,github,docker,linux,nginx,vscode,postman,figma&theme=dark&perline=8)](https://skillicons.dev)
 
 </div>
 
 <br/>
 
-<!-- ██████████████████████████████████████████████████████████ -->
-<!--              TIMELINE — INTERACTIVE SVG                    -->
-<!-- ██████████████████████████████████████████████████████████ -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--                    SVG DIVIDER                          -->
+<!-- ═══════════════════════════════════════════════════════ -->
+
+<div align="center">
+<svg width="100%" height="3" viewBox="0 0 800 3" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="divGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#0d1117" stop-opacity="0"/>
+      <stop offset="20%"  stop-color="#6366f1"/>
+      <stop offset="50%"  stop-color="#38bdf8"/>
+      <stop offset="80%"  stop-color="#00ff41"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1" y="1" fill="url(#divGrad2)"/>
+</svg>
+</div>
+
+<br/>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--                    TECH STACK                           -->
+<!-- ═══════════════════════════════════════════════════════ -->
+
+<h2 align="center">
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Laptop.png" width="28"/> &nbsp;Tech Stack
+</h2>
 
 <div align="center">
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 36" width="90%">
-  <line x1="0" y1="18" x2="820" y2="18" stroke="url(#divGrad1)" stroke-width="1"/>
-  <polygon points="410,4 418,18 410,32 402,18" fill="#14b8a6" opacity="0.8"/>
-</svg>
+<!-- Languages -->
+<p>
+<img src="https://skillicons.dev/icons?i=php,js,ts,python,html,css&theme=dark" alt="Languages"/>
+</p>
+
+<sub><kbd>Languages</kbd></sub>
+
+<!-- Frontend -->
+<p>
+<img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,vite,figma&theme=dark" alt="Frontend"/>
+</p>
+
+<sub><kbd>Frontend</kbd></sub>
+
+<!-- Backend -->
+<p>
+<img src="https://skillicons.dev/icons?i=laravel,nodejs,express,fastapi&theme=dark" alt="Backend"/>
+</p>
+
+<sub><kbd>Backend</kbd></sub>
+
+<!-- Database -->
+<p>
+<img src="https://skillicons.dev/icons?i=mysql,postgres,sqlite,redis&theme=dark" alt="Database"/>
+</p>
+
+<sub><kbd>Database</kbd></sub>
+
+<!-- DevOps & Cloud -->
+<p>
+<img src="https://skillicons.dev/icons?i=docker,git,github,vercel,linux&theme=dark" alt="DevOps"/>
+</p>
+
+<sub><kbd>DevOps & Tools</kbd></sub>
+
+<!-- AI & Data -->
+<p>
+<img src="https://skillicons.dev/icons?i=python,tensorflow,pytorch,sklearn&theme=dark" alt="AI/ML"/>
+</p>
+
+<sub><kbd>AI / ML</kbd></sub>
 
 </div>
 
-## 🛤️ `> git log --timeline --pretty=journey`
+<br/>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--            INTERACTIVE TIMELINE (SVG)                   -->
+<!-- ═══════════════════════════════════════════════════════ -->
+
+<h2 align="center">
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" width="28"/> &nbsp;Journey Timeline
+</h2>
 
 <div align="center">
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 520" width="90%">
+<svg width="700" height="520" viewBox="0 0 700 520" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="tlBg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0d1117"/>
-      <stop offset="100%" stop-color="#090c10"/>
-    </linearGradient>
     <linearGradient id="tlLine" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%"   stop-color="#38bdf8"/>
-      <stop offset="40%"  stop-color="#6366f1"/>
-      <stop offset="70%"  stop-color="#14b8a6"/>
-      <stop offset="100%" stop-color="#22c55e"/>
+      <stop offset="0%"   stop-color="#00ff41"/>
+      <stop offset="40%"  stop-color="#38bdf8"/>
+      <stop offset="70%"  stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.5"/>
     </linearGradient>
     <filter id="tlGlow">
       <feGaussianBlur stdDeviation="3" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <linearGradient id="card1" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#1e3a5f"/>
-      <stop offset="100%" stop-color="#0f172a"/>
-    </linearGradient>
-    <linearGradient id="card2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#2d1b69"/>
-      <stop offset="100%" stop-color="#0f172a"/>
-    </linearGradient>
-    <linearGradient id="card3" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#134e4a"/>
-      <stop offset="100%" stop-color="#0f172a"/>
-    </linearGradient>
-    <linearGradient id="card4" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#14532d"/>
-      <stop offset="100%" stop-color="#0f172a"/>
-    </linearGradient>
-    <linearGradient id="card5" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#7c2d12"/>
-      <stop offset="100%" stop-color="#0f172a"/>
-    </linearGradient>
+    <filter id="dotGlow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
 
-  <rect width="820" height="520" fill="url(#tlBg)" rx="12" stroke="#1e293b" stroke-width="1"/>
+  <rect width="700" height="520" fill="#0d1117"/>
 
-  <!-- Center spine -->
-  <line x1="410" y1="20" x2="410" y2="500" stroke="url(#tlLine)" stroke-width="2"/>
+  <!-- Title -->
+  <text x="350" y="35" font-family="'Courier New',monospace" font-size="13" fill="#475569"
+        text-anchor="middle" letter-spacing="4">── DEVELOPER JOURNEY ──</text>
 
-  <!-- ── 2023 ── -->
-  <circle cx="410" cy="55" r="12" fill="#38bdf8" filter="url(#tlGlow)">
-    <animate attributeName="r" values="12;15;12" dur="3s" repeatCount="indefinite"/>
-  </circle>
-  <text x="410" y="60" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#0d1117">23</text>
+  <!-- Timeline vertical line -->
+  <line x1="350" y1="55" x2="350" y2="485" stroke="url(#tlLine)" stroke-width="2"
+        stroke-dasharray="6 4" filter="url(#tlGlow)"/>
+
+  <!-- ─── 2023: Start ─── -->
   <!-- Left card -->
-  <rect x="40" y="30" width="340" height="70" rx="8" fill="url(#card1)" stroke="#38bdf8" stroke-width="0.5" stroke-opacity="0.5"/>
-  <text x="56" y="52" font-family="'SF Mono',monospace" font-size="13" font-weight="bold" fill="#38bdf8">2023 — The Beginning</text>
-  <text x="56" y="70" font-family="'SF Mono',monospace" font-size="11" fill="#94a3b8">Started programming journey</text>
-  <text x="56" y="86" font-family="'SF Mono',monospace" font-size="11" fill="#64748b">HTML · CSS · JavaScript basics</text>
-  <!-- connector -->
-  <line x1="380" y1="55" x2="398" y2="55" stroke="#38bdf8" stroke-width="1" stroke-dasharray="4,2"/>
-
-  <!-- ── 2024 ── -->
-  <circle cx="410" cy="155" r="12" fill="#6366f1" filter="url(#tlGlow)">
-    <animate attributeName="r" values="12;15;12" dur="3.5s" repeatCount="indefinite"/>
+  <rect x="40" y="62" width="280" height="76" rx="8" fill="#161b22"/>
+  <rect x="40" y="62" width="280" height="76" rx="8" fill="none" stroke="#00ff41" stroke-width="0.8" opacity="0.6"/>
+  <rect x="40" y="62" width="4"   height="76" rx="2" fill="#00ff41"/>
+  <text x="60" y="84"  font-family="'Courier New',monospace" font-size="11" fill="#00ff41" font-weight="bold">2023</text>
+  <text x="60" y="100" font-family="'Courier New',monospace" font-size="13" fill="#e2e8f0" font-weight="bold">Started Programming</text>
+  <text x="60" y="116" font-family="'Courier New',monospace" font-size="10" fill="#64748b">HTML · CSS · JavaScript</text>
+  <text x="60" y="130" font-family="'Courier New',monospace" font-size="10" fill="#64748b">First web projects 🎉</text>
+  <!-- Connector line -->
+  <line x1="320" y1="100" x2="340" y2="100" stroke="#00ff41" stroke-width="1.5" opacity="0.7"/>
+  <!-- Timeline dot -->
+  <circle cx="350" cy="100" r="8"  fill="#0d1117" stroke="#00ff41" stroke-width="2"/>
+  <circle cx="350" cy="100" r="4"  fill="#00ff41" filter="url(#dotGlow)">
+    <animate attributeName="r" values="4;6;4" dur="2s" repeatCount="indefinite"/>
   </circle>
-  <text x="410" y="160" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#fff">24</text>
+
+  <!-- ─── 2024 Early: Laravel ─── -->
   <!-- Right card -->
-  <rect x="440" y="128" width="340" height="70" rx="8" fill="url(#card2)" stroke="#6366f1" stroke-width="0.5" stroke-opacity="0.5"/>
-  <text x="456" y="150" font-family="'SF Mono',monospace" font-size="13" font-weight="bold" fill="#6366f1">2024 — Backend Rising</text>
-  <text x="456" y="168" font-family="'SF Mono',monospace" font-size="11" fill="#94a3b8">Mastered PHP + Laravel framework</text>
-  <text x="456" y="184" font-family="'SF Mono',monospace" font-size="11" fill="#64748b">MySQL · REST API · MVC pattern</text>
-  <!-- connector -->
-  <line x1="422" y1="155" x2="440" y2="155" stroke="#6366f1" stroke-width="1" stroke-dasharray="4,2"/>
-
-  <!-- ── 2025 ── -->
-  <circle cx="410" cy="255" r="12" fill="#14b8a6" filter="url(#tlGlow)">
-    <animate attributeName="r" values="12;15;12" dur="4s" repeatCount="indefinite"/>
+  <rect x="380" y="152" width="280" height="76" rx="8" fill="#161b22"/>
+  <rect x="380" y="152" width="280" height="76" rx="8" fill="none" stroke="#38bdf8" stroke-width="0.8" opacity="0.6"/>
+  <rect x="676" y="152" width="4"   height="76" rx="2" fill="#38bdf8"/>
+  <text x="400" y="174" font-family="'Courier New',monospace" font-size="11" fill="#38bdf8" font-weight="bold">2024 — Q1</text>
+  <text x="400" y="190" font-family="'Courier New',monospace" font-size="13" fill="#e2e8f0" font-weight="bold">Laravel & PHP Backend</text>
+  <text x="400" y="206" font-family="'Courier New',monospace" font-size="10" fill="#64748b">MVC · REST API · Auth</text>
+  <text x="400" y="220" font-family="'Courier New',monospace" font-size="10" fill="#64748b">First real project 🛠️</text>
+  <!-- Connector -->
+  <line x1="360" y1="190" x2="380" y2="190" stroke="#38bdf8" stroke-width="1.5" opacity="0.7"/>
+  <!-- Dot -->
+  <circle cx="350" cy="190" r="8"  fill="#0d1117" stroke="#38bdf8" stroke-width="2"/>
+  <circle cx="350" cy="190" r="4"  fill="#38bdf8" filter="url(#dotGlow)">
+    <animate attributeName="r" values="4;6;4" dur="2.4s" repeatCount="indefinite"/>
   </circle>
-  <text x="410" y="260" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#0d1117">25</text>
+
+  <!-- ─── 2024 Mid: React ─── -->
   <!-- Left card -->
-  <rect x="40" y="228" width="340" height="70" rx="8" fill="url(#card3)" stroke="#14b8a6" stroke-width="0.5" stroke-opacity="0.5"/>
-  <text x="56" y="250" font-family="'SF Mono',monospace" font-size="13" font-weight="bold" fill="#14b8a6">2025 — Fullstack Era</text>
-  <text x="56" y="268" font-family="'SF Mono',monospace" font-size="11" fill="#94a3b8">React + TypeScript + Laravel</text>
-  <text x="56" y="284" font-family="'SF Mono',monospace" font-size="11" fill="#64748b">ML with Python · scikit-learn</text>
-  <line x1="380" y1="255" x2="398" y2="255" stroke="#14b8a6" stroke-width="1" stroke-dasharray="4,2"/>
-
-  <!-- ── 2026 ── -->
-  <circle cx="410" cy="355" r="14" fill="#22c55e" filter="url(#tlGlow)">
-    <animate attributeName="r" values="14;18;14" dur="2s" repeatCount="indefinite"/>
-    <animate attributeName="fill" values="#22c55e;#16a34a;#22c55e" dur="2s" repeatCount="indefinite"/>
+  <rect x="40" y="242" width="280" height="76" rx="8" fill="#161b22"/>
+  <rect x="40" y="242" width="280" height="76" rx="8" fill="none" stroke="#6366f1" stroke-width="0.8" opacity="0.6"/>
+  <rect x="40" y="242" width="4"   height="76" rx="2" fill="#6366f1"/>
+  <text x="60" y="264" font-family="'Courier New',monospace" font-size="11" fill="#6366f1" font-weight="bold">2024 — Q3</text>
+  <text x="60" y="280" font-family="'Courier New',monospace" font-size="13" fill="#e2e8f0" font-weight="bold">React Frontend + ML</text>
+  <text x="60" y="296" font-family="'Courier New',monospace" font-size="10" fill="#64748b">React · Python · Pandas</text>
+  <text x="60" y="310" font-family="'Courier New',monospace" font-size="10" fill="#64748b">UTS ML project submitted 📊</text>
+  <!-- Connector -->
+  <line x1="320" y1="280" x2="340" y2="280" stroke="#6366f1" stroke-width="1.5" opacity="0.7"/>
+  <!-- Dot -->
+  <circle cx="350" cy="280" r="8"  fill="#0d1117" stroke="#6366f1" stroke-width="2"/>
+  <circle cx="350" cy="280" r="4"  fill="#6366f1" filter="url(#dotGlow)">
+    <animate attributeName="r" values="4;6;4" dur="1.8s" repeatCount="indefinite"/>
   </circle>
-  <text x="410" y="361" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#0d1117">26</text>
-  <!-- Right card — CURRENT -->
-  <rect x="440" y="325" width="340" height="72" rx="8" fill="url(#card4)" stroke="#22c55e" stroke-width="1"/>
-  <text x="456" y="348" font-family="'SF Mono',monospace" font-size="13" font-weight="bold" fill="#22c55e">2026 — NOW ● LIVE</text>
-  <text x="456" y="366" font-family="'SF Mono',monospace" font-size="11" fill="#94a3b8">Software Engineer · AI Explorer</text>
-  <text x="456" y="382" font-family="'SF Mono',monospace" font-size="11" fill="#64748b">Building ERP · 270+ contributions</text>
-  <line x1="422" y1="355" x2="440" y2="355" stroke="#22c55e" stroke-width="1" stroke-dasharray="4,2"/>
 
-  <!-- ── FUTURE ── -->
-  <circle cx="410" cy="455" r="12" fill="none" stroke="#f97316" stroke-width="2" stroke-dasharray="4,2" filter="url(#tlGlow)">
-    <animate attributeName="stroke-dashoffset" values="0;16" dur="2s" repeatCount="indefinite"/>
+  <!-- ─── 2025: Fullstack ─── -->
+  <!-- Right card -->
+  <rect x="380" y="332" width="280" height="76" rx="8" fill="#161b22"/>
+  <rect x="380" y="332" width="280" height="76" rx="8" fill="none" stroke="#f59e0b" stroke-width="0.8" opacity="0.6"/>
+  <rect x="676" y="332" width="4"   height="76" rx="2" fill="#f59e0b"/>
+  <text x="400" y="354" font-family="'Courier New',monospace" font-size="11" fill="#f59e0b" font-weight="bold">2025 — NOW</text>
+  <text x="400" y="370" font-family="'Courier New',monospace" font-size="13" fill="#e2e8f0" font-weight="bold">Fullstack + Architecture</text>
+  <text x="400" y="386" font-family="'Courier New',monospace" font-size="10" fill="#64748b">Laravel + React + Docker</text>
+  <text x="400" y="402" font-family="'Courier New',monospace" font-size="10" fill="#64748b">Clean Code · Open Source 🔥</text>
+  <!-- Connector -->
+  <line x1="360" y1="370" x2="380" y2="370" stroke="#f59e0b" stroke-width="1.5" opacity="0.7"/>
+  <!-- Dot (pulsing - current) -->
+  <circle cx="350" cy="370" r="10" fill="#0d1117" stroke="#f59e0b" stroke-width="2"/>
+  <circle cx="350" cy="370" r="5"  fill="#f59e0b" filter="url(#dotGlow)">
+    <animate attributeName="r"       values="5;8;5"   dur="1.2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0.4;1" dur="1.2s" repeatCount="indefinite"/>
   </circle>
-  <text x="410" y="460" text-anchor="middle" font-family="monospace" font-size="9" fill="#f97316">∞</text>
-  <!-- Left card -->
-  <rect x="40" y="428" width="340" height="55" rx="8" fill="url(#card5)" stroke="#f97316" stroke-width="0.5" stroke-opacity="0.5" stroke-dasharray="4,2"/>
-  <text x="56" y="450" font-family="'SF Mono',monospace" font-size="13" font-weight="bold" fill="#f97316">Future — AI Engineer</text>
-  <text x="56" y="468" font-family="'SF Mono',monospace" font-size="11" fill="#64748b">Deep Learning · LLM · Production AI</text>
-  <line x1="380" y1="455" x2="398" y2="455" stroke="#f97316" stroke-width="1" stroke-dasharray="4,2"/>
+
+  <!-- ─── Future ─── -->
+  <!-- Left card — semi-transparent / future -->
+  <rect x="40" y="422" width="280" height="76" rx="8" fill="#161b22" opacity="0.5"/>
+  <rect x="40" y="422" width="280" height="76" rx="8" fill="none" stroke="#94a3b8" stroke-width="0.6" stroke-dasharray="4 3" opacity="0.4"/>
+  <text x="60" y="444" font-family="'Courier New',monospace" font-size="11" fill="#475569" font-weight="bold">2026 — FUTURE</text>
+  <text x="60" y="460" font-family="'Courier New',monospace" font-size="13" fill="#64748b" font-weight="bold">Software / AI Engineer</text>
+  <text x="60" y="476" font-family="'Courier New',monospace" font-size="10" fill="#334155">Building for the world 🌍</text>
+  <text x="60" y="490" font-family="'Courier New',monospace" font-size="10" fill="#334155">Launching products · AI 🤖</text>
+  <!-- Connector -->
+  <line x1="320" y1="460" x2="340" y2="460" stroke="#475569" stroke-width="1" stroke-dasharray="3 3" opacity="0.4"/>
+  <!-- Dot -->
+  <circle cx="350" cy="460" r="8" fill="#0d1117" stroke="#475569" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.5"/>
+  <circle cx="350" cy="460" r="3" fill="#475569" opacity="0.5"/>
 </svg>
 
 </div>
 
 <br/>
 
-<!-- ██████████████████████████████████████████████████████████ -->
-<!--                  GITHUB ANALYTICS                         -->
-<!-- ██████████████████████████████████████████████████████████ -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--              FEATURED PROJECTS                          -->
+<!-- ═══════════════════════════════════════════════════════ -->
 
-<div align="center">
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 36" width="90%">
-  <line x1="0" y1="18" x2="820" y2="18" stroke="url(#divGrad1)" stroke-width="1"/>
-  <polygon points="410,4 418,18 410,32 402,18" fill="#2563eb" opacity="0.8"/>
-</svg>
-
-</div>
-
-## 📊 `> gh api /analytics --format=premium`
-
-<div align="center">
-
-<!-- GitHub Stats + Top Languages -->
-<img src="https://github-readme-stats.vercel.app/api?username=Sahal111&show_icons=true&theme=chartreuse-dark&hide_border=true&bg_color=0d1117&title_color=38bdf8&icon_color=6366f1&text_color=94a3b8&ring_color=38bdf8&count_private=true&include_all_commits=true" height="165" alt="GitHub Stats"/>
-&nbsp;
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Sahal111&layout=compact&theme=chartreuse-dark&hide_border=true&bg_color=0d1117&title_color=38bdf8&text_color=94a3b8&langs_count=8" height="165" alt="Top Languages"/>
-
-<br/><br/>
-
-<!-- Streak Stats -->
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=Sahal111&theme=terminal&hide_border=true&background=0d1117&ring=38bdf8&fire=6366f1&currStreakLabel=38bdf8&sideLabels=94a3b8&dates=475569&sideNums=e2e8f0&currStreakNum=ffffff" alt="GitHub Streak" width="70%"/>
-
-<br/><br/>
-
-<!-- Activity Graph -->
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Sahal111&bg_color=0d1117&color=38bdf8&line=6366f1&point=ffffff&area=true&hide_border=true&custom_title=Sahal111%27s%20Contribution%20Graph&area_color=38bdf8" width="95%" alt="Activity Graph"/>
-
-<br/><br/>
-
-<!-- Trophies -->
-<img src="https://github-profile-trophy.vercel.app/?username=Sahal111&theme=matrix&no-frame=true&no-bg=true&row=1&column=7&margin-w=8" width="95%" alt="Trophies"/>
-
-</div>
-
-<br/>
-
-<!-- ██████████████████████████████████████████████████████████ -->
-<!--             CONTRIBUTION SNAKE ANIMATION                  -->
-<!-- ██████████████████████████████████████████████████████████ -->
-
-<div align="center">
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 36" width="90%">
-  <line x1="0" y1="18" x2="820" y2="18" stroke="url(#divGrad1)" stroke-width="1"/>
-  <polygon points="410,4 418,18 410,32 402,18" fill="#14b8a6" opacity="0.8"/>
-</svg>
-
-## 🐍 `> ./snake.py --eat-contributions`
-
-<!--
-  SNAKE ANIMATION SETUP:
-  ─────────────────────────────────────────────────────────────
-  1. In your Sahal111/Sahal111 repo, go to Settings → Actions → Workflows
-  2. Create file: .github/workflows/snake.yml
-  3. Paste this content:
-
-  name: Generate Snake
-  on:
-    schedule: [{ cron: "0 */12 * * *" }]
-    workflow_dispatch:
-  jobs:
-    generate:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v3
-        - uses: Platane/snk@v3
-          with:
-            github_user_name: Sahal111
-            outputs: |
-              dist/github-snake.svg?palette=github-dark
-              dist/github-snake-dark.svg?palette=github-dark&color_snake=38bdf8
-        - uses: crazy-max/ghaction-github-pages@v3
-          with: { target_branch: output, build_dir: dist }
-          env: { GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} }
-  ─────────────────────────────────────────────────────────────
-  After setup, uncomment the img below and delete this comment:
--->
-
-<img src="https://raw.githubusercontent.com/Sahal111/Sahal111/output/github-snake-dark.svg" alt="Snake animation" width="95%"/>
-
-<!-- Fallback static badge while snake is being set up -->
-[![Contribution Snake](https://img.shields.io/badge/🐍_Contribution_Snake-Setting_Up-38bdf8?style=for-the-badge&labelColor=0d1117)](https://github.com/Sahal111/Sahal111/actions)
-
-</div>
-
-<br/>
-
-<!-- ██████████████████████████████████████████████████████████ -->
-<!--                 FEATURED PROJECTS                         -->
-<!-- ██████████████████████████████████████████████████████████ -->
-
-<div align="center">
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 36" width="90%">
-  <line x1="0" y1="18" x2="820" y2="18" stroke="url(#divGrad1)" stroke-width="1"/>
-  <polygon points="410,4 418,18 410,32 402,18" fill="#38bdf8" opacity="0.8"/>
-</svg>
-
-</div>
-
-## 📌 `> git ls-remote --featured-projects`
+<h2 align="center">
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Hammer%20and%20Wrench.png" width="28"/> &nbsp;Featured Projects
+</h2>
 
 <div align="center">
 
 <!-- Row 1 -->
 <a href="https://github.com/Sahal111/sneakershead">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Sahal111&repo=sneakershead&theme=chartreuse-dark&hide_border=true&bg_color=0d1117&title_color=38bdf8&icon_color=6366f1&text_color=94a3b8" alt="sneakershead"/>
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Sahal111&repo=sneakershead&theme=chartreuse-dark&hide_border=true&bg_color=0d1117&title_color=00ff41&icon_color=38bdf8&text_color=94a3b8&border_radius=10" />
 </a>
-&nbsp;
 <a href="https://github.com/Sahal111/UTS_ML_Sahal">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Sahal111&repo=UTS_ML_Sahal&theme=chartreuse-dark&hide_border=true&bg_color=0d1117&title_color=38bdf8&icon_color=6366f1&text_color=94a3b8" alt="UTS ML Sahal"/>
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Sahal111&repo=UTS_ML_Sahal&theme=chartreuse-dark&hide_border=true&bg_color=0d1117&title_color=38bdf8&icon_color=6366f1&text_color=94a3b8&border_radius=10" />
 </a>
-
-<br/><br/>
 
 <!-- Row 2 -->
 <a href="https://github.com/Sahal111/Challenge_Frontend_React">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Sahal111&repo=Challenge_Frontend_React&theme=chartreuse-dark&hide_border=true&bg_color=0d1117&title_color=38bdf8&icon_color=6366f1&text_color=94a3b8" alt="Frontend React Challenge"/>
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Sahal111&repo=Challenge_Frontend_React&theme=chartreuse-dark&hide_border=true&bg_color=0d1117&title_color=6366f1&icon_color=00ff41&text_color=94a3b8&border_radius=10" />
 </a>
-&nbsp;
 <a href="https://github.com/Sahal111/RPL_Group1">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Sahal111&repo=RPL_Group1&theme=chartreuse-dark&hide_border=true&bg_color=0d1117&title_color=38bdf8&icon_color=6366f1&text_color=94a3b8" alt="RPL Group1"/>
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Sahal111&repo=RPL_Group1&theme=chartreuse-dark&hide_border=true&bg_color=0d1117&title_color=f59e0b&icon_color=38bdf8&text_color=94a3b8&border_radius=10" />
 </a>
 
 </div>
 
-<br/>
-
-<!-- ██████████████████████████████████████████████████████████ -->
-<!--            LIVE WIDGETS — SPOTIFY / CODING                -->
-<!-- ██████████████████████████████████████████████████████████ -->
-
+<!-- Custom Project Cards for WIP projects -->
 <div align="center">
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 36" width="90%">
-  <line x1="0" y1="18" x2="820" y2="18" stroke="url(#divGrad1)" stroke-width="1"/>
-  <polygon points="410,4 418,18 410,32 402,18" fill="#6366f1" opacity="0.8"/>
-</svg>
-
-</div>
-
-## 🎧 `> ./live_status.sh --now-playing`
-
-<div align="center">
-
-<table>
-<tr>
-<td align="center" width="50%">
-
-<!-- ─────────────────────────────────────────────
-  🎵 SPOTIFY — NOW PLAYING
-  ─────────────────────────────────────────────
-  SETUP STEPS:
-  1. Go to https://github.com/novatorem/novatorem
-  2. Deploy to Vercel, connect your Spotify account
-  3. Replace YOUR_VERCEL_APP below with your URL
-  ─────────────────────────────────────────────
-  Once set up, uncomment this block:
-
-  [![Spotify](https://YOUR_VERCEL_APP.vercel.app/api/spotify)](https://open.spotify.com/user/YOUR_SPOTIFY_ID)
-  ─────────────────────────────────────────────
--->
-
-[![Spotify](https://img.shields.io/badge/🎵_NOW_PLAYING-Connect_Spotify-1DB954?style=for-the-badge&labelColor=0d1117&logo=spotify)](https://github.com/novatorem/novatorem)
-
-**🎵 Now Playing**  
-> *Setup Spotify widget via [novatorem](https://github.com/novatorem/novatorem)*
-
-</td>
-<td align="center" width="50%">
-
-<!-- ─────────────────────────────────────────────
-  ⏱ WAKATIME — CODING STATS
-  ─────────────────────────────────────────────
-  SETUP STEPS:
-  1. Sign up at https://wakatime.com
-  2. Install WakaTime plugin in VS Code
-  3. Add WAKATIME_API_KEY to repo secrets
-  4. Replace YOUR_WAKATIME_USERNAME below
-  ─────────────────────────────────────────────
-  Once set up, uncomment this block:
-
-  [![Wakatime](https://wakatime.com/badge/user/YOUR_WAKATIME_ID.svg)](https://wakatime.com/@Sahal111)
-  ![Wakatime](https://github-readme-stats.vercel.app/api/wakatime?username=Sahal111&layout=compact&theme=chartreuse-dark&hide_border=true&bg_color=0d1117&title_color=38bdf8&text_color=94a3b8)
-  ─────────────────────────────────────────────
--->
-
-[![WakaTime](https://img.shields.io/badge/⏱_CODING_STATS-Setup_WakaTime-38bdf8?style=for-the-badge&labelColor=0d1117&logo=wakatime)](https://wakatime.com)
-
-**⏱ Coding Stats**  
-> *Setup WakaTime at [wakatime.com](https://wakatime.com)*
-
-</td>
-</tr>
-</table>
-
-</div>
-
-<br/>
-
-<!-- ██████████████████████████████████████████████████████████ -->
-<!--                   ACHIEVEMENT SECTION                     -->
-<!-- ██████████████████████████████████████████████████████████ -->
-
-<div align="center">
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 36" width="90%">
-  <line x1="0" y1="18" x2="820" y2="18" stroke="url(#divGrad1)" stroke-width="1"/>
-  <polygon points="410,4 418,18 410,32 402,18" fill="#f59e0b" opacity="0.8"/>
-</svg>
-
-</div>
-
-## 🏆 `> gh achievement list --unlocked`
-
-<div align="center">
-
-<table>
-<tr>
-
-<td align="center" width="25%">
-
-```
-╔═══════════╗
-║  🌟 270+  ║
-║ Commits   ║
-║  in 2026  ║
-╚═══════════╝
-```
-**Commit Warrior**
-
-</td>
-
-<td align="center" width="25%">
-
-```
-╔═══════════╗
-║  📦  14   ║
-║  Public   ║
-║   Repos   ║
-╚═══════════╝
-```
-**Open Builder**
-
-</td>
-
-<td align="center" width="25%">
-
-```
-╔═══════════╗
-║  ⚡ Full  ║
-║  Stack    ║
-║ Certified ║
-╚═══════════╝
-```
-**Fullstack Dev**
-
-</td>
-
-<td align="center" width="25%">
-
-```
-╔═══════════╗
-║  🧠  ML   ║
-║ Explorer  ║
-║  Python   ║
-╚═══════════╝
-```
-**AI Learner**
-
-</td>
-
-</tr>
-</table>
-
-<!-- Trophy widget -->
-<img src="https://github-profile-trophy.vercel.app/?username=Sahal111&theme=matrix&no-frame=true&no-bg=true&row=1&column=4&margin-w=12" alt="Trophies"/>
-
-</div>
-
-<br/>
-
-<!-- ██████████████████████████████████████████████████████████ -->
-<!--                 CURRENT FOCUS CARDS                       -->
-<!-- ██████████████████████████████████████████████████████████ -->
-
-<div align="center">
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 36" width="90%">
-  <line x1="0" y1="18" x2="820" y2="18" stroke="url(#divGrad1)" stroke-width="1"/>
-  <polygon points="410,4 418,18 410,32 402,18" fill="#22c55e" opacity="0.8"/>
-</svg>
-
-</div>
-
-## 🎯 `> ./focus --current`
-
-<div align="center">
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 180" width="90%">
+<svg width="760" height="100" viewBox="0 0 760 100" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="focusBg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0d1117"/>
-      <stop offset="100%" stop-color="#090c10"/>
-    </linearGradient>
-    <linearGradient id="fc1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1e3a5f"/>
-      <stop offset="100%" stop-color="#0f172a"/>
-    </linearGradient>
-    <linearGradient id="fc2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#2d1b69"/>
-      <stop offset="100%" stop-color="#0f172a"/>
-    </linearGradient>
-    <linearGradient id="fc3" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#134e4a"/>
-      <stop offset="100%" stop-color="#0f172a"/>
-    </linearGradient>
-    <linearGradient id="fc4" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#3b0764"/>
-      <stop offset="100%" stop-color="#0f172a"/>
-    </linearGradient>
-    <linearGradient id="fc5" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#14532d"/>
-      <stop offset="100%" stop-color="#0f172a"/>
-    </linearGradient>
-  </defs>
-
-  <rect width="820" height="180" fill="url(#focusBg)" rx="12" stroke="#1e293b" stroke-width="1"/>
-
-  <!-- Card 1 -->
-  <rect x="16" y="16" width="148" height="148" rx="10" fill="url(#fc1)" stroke="#38bdf8" stroke-width="0.5"/>
-  <text x="90" y="65" text-anchor="middle" font-size="28">🚀</text>
-  <text x="90" y="92" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#38bdf8">School ERP</text>
-  <text x="90" y="110" text-anchor="middle" font-family="monospace" font-size="10" fill="#64748b">Laravel + React</text>
-  <text x="90" y="128" text-anchor="middle" font-family="monospace" font-size="10" fill="#475569">Building</text>
-  <circle cx="90" cy="148" r="5" fill="#22c55e">
-    <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
-  </circle>
-
-  <!-- Card 2 -->
-  <rect x="172" y="16" width="148" height="148" rx="10" fill="url(#fc2)" stroke="#6366f1" stroke-width="0.5"/>
-  <text x="246" y="65" text-anchor="middle" font-size="28">🧠</text>
-  <text x="246" y="92" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#6366f1">Deep Learning</text>
-  <text x="246" y="110" text-anchor="middle" font-family="monospace" font-size="10" fill="#64748b">Python + PyTorch</text>
-  <text x="246" y="128" text-anchor="middle" font-family="monospace" font-size="10" fill="#475569">Learning</text>
-  <circle cx="246" cy="148" r="5" fill="#6366f1">
-    <animate attributeName="opacity" values="1;0.3;1" dur="2.5s" repeatCount="indefinite"/>
-  </circle>
-
-  <!-- Card 3 -->
-  <rect x="328" y="16" width="148" height="148" rx="10" fill="url(#fc3)" stroke="#14b8a6" stroke-width="0.5"/>
-  <text x="402" y="65" text-anchor="middle" font-size="28">⚡</text>
-  <text x="402" y="92" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#14b8a6">React + Vite</text>
-  <text x="402" y="110" text-anchor="middle" font-family="monospace" font-size="10" fill="#64748b">TypeScript · TW</text>
-  <text x="402" y="128" text-anchor="middle" font-family="monospace" font-size="10" fill="#475569">Practicing</text>
-  <circle cx="402" cy="148" r="5" fill="#14b8a6">
-    <animate attributeName="opacity" values="1;0.3;1" dur="3s" repeatCount="indefinite"/>
-  </circle>
-
-  <!-- Card 4 -->
-  <rect x="484" y="16" width="148" height="148" rx="10" fill="url(#fc4)" stroke="#a855f7" stroke-width="0.5"/>
-  <text x="558" y="65" text-anchor="middle" font-size="28">📐</text>
-  <text x="558" y="92" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#a855f7">Clean Arch</text>
-  <text x="558" y="110" text-anchor="middle" font-family="monospace" font-size="10" fill="#64748b">SOLID · DDD</text>
-  <text x="558" y="128" text-anchor="middle" font-family="monospace" font-size="10" fill="#475569">Studying</text>
-  <circle cx="558" cy="148" r="5" fill="#a855f7">
-    <animate attributeName="opacity" values="1;0.3;1" dur="2.2s" repeatCount="indefinite"/>
-  </circle>
-
-  <!-- Card 5 -->
-  <rect x="640" y="16" width="164" height="148" rx="10" fill="url(#fc5)" stroke="#22c55e" stroke-width="0.5"/>
-  <text x="722" y="65" text-anchor="middle" font-size="28">🌐</text>
-  <text x="722" y="92" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#22c55e">Open Source</text>
-  <text x="722" y="110" text-anchor="middle" font-family="monospace" font-size="10" fill="#64748b">Contributing</text>
-  <text x="722" y="128" text-anchor="middle" font-family="monospace" font-size="10" fill="#475569">Exploring</text>
-  <circle cx="722" cy="148" r="5" fill="#22c55e">
-    <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/>
-  </circle>
-</svg>
-
-</div>
-
-<br/>
-
-<!-- ██████████████████████████████████████████████████████████ -->
-<!--                    FUN FACTS                              -->
-<!-- ██████████████████████████████████████████████████████████ -->
-
-<div align="center">
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 36" width="90%">
-  <line x1="0" y1="18" x2="820" y2="18" stroke="url(#divGrad1)" stroke-width="1"/>
-  <polygon points="410,4 418,18 410,32 402,18" fill="#f59e0b" opacity="0.8"/>
-</svg>
-
-</div>
-
-## 🎲 `> cat fun_facts.txt | shuf | head -6`
-
-<div align="center">
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│  ⚡  I can center a div in CSS — on the first try (sometimes)   │
-│  🐛  My debugging style: console.log > debugger                 │
-│  ☕  Correlation between coffee intake and commit quality: 1.0  │
-│  🌙  Peak coding hours: 10PM – 2AM (don't ask why)             │
-│  🎮  I name my variables after anime characters sometimes        │
-│  🇮🇩  Indonesian dev who dreams in English & codes in PHP       │
-└─────────────────────────────────────────────────────────────────┘
-```
-
-<!-- Random Dev Quote -->
-<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark&quote=The%20best%20code%20is%20no%20code%20at%20all.%20Every%20new%20line%20of%20code%20you%20willingly%20bring%20into%20the%20world%20is%20code%20that%20has%20to%20be%20debugged&author=Jeff%20Atwood" alt="Dev Quote" width="80%"/>
-
-</div>
-
-<br/>
-
-<!-- ██████████████████████████████████████████████████████████ -->
-<!--                   CONNECT / SOCIALS                       -->
-<!-- ██████████████████████████████████████████████████████████ -->
-
-<div align="center">
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 36" width="90%">
-  <line x1="0" y1="18" x2="820" y2="18" stroke="url(#divGrad1)" stroke-width="1"/>
-  <polygon points="410,4 418,18 410,32 402,18" fill="#38bdf8" opacity="0.8"/>
-</svg>
-
-</div>
-
-## 🌐 `> curl -s https://api.sahal.dev/contact | jq`
-
-<div align="center">
-
-[![GitHub](https://img.shields.io/badge/GitHub-@Sahal111-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=0d1117)](https://github.com/Sahal111)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Sahal-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d1117)](https://linkedin.com/in/sahal111)
-[![Instagram](https://img.shields.io/badge/Instagram-@X__proff-E4405F?style=for-the-badge&logo=instagram&logoColor=white&labelColor=0d1117)](https://instagram.com/sahal111)
-[![Email](https://img.shields.io/badge/Email-Drop_a_Mail-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0d1117)](mailto:sahal@gmail.com)
-
-<br/>
-
-<!-- Typing CTA -->
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=15&duration=3000&pause=1000&color=38BDF8&background=0D111700&center=true&vCenter=true&multiline=false&width=600&lines=Let's+build+something+amazing+together+🚀;Open+for+freelance+%26+collaboration+💼;Drop+me+a+message+anytime+✉️)](https://github.com/Sahal111)
-
-</div>
-
-<br/>
-
-<!-- ██████████████████████████████████████████████████████████ -->
-<!--     GITHUB ACTIONS SETUP — AUTO-UPDATE WORKFLOWS          -->
-<!-- ██████████████████████████████████████████████████████████ -->
-
-<!--
-═══════════════════════════════════════════════════════════════════
-  ⚙️  GITHUB ACTIONS AUTO-UPDATE WORKFLOWS
-═══════════════════════════════════════════════════════════════════
-
-  Create these workflow files in .github/workflows/ to enable
-  auto-updating content on your profile README:
-
-  ── 1. CONTRIBUTION SNAKE ─────────────────────────────────────
-  File: .github/workflows/snake.yml
-  ┌──────────────────────────────────────────────────────────────┐
-  │ name: Generate Snake                                         │
-  │ on:                                                          │
-  │   schedule: [{ cron: "0 */12 * * *" }]                      │
-  │   workflow_dispatch:                                         │
-  │ jobs:                                                        │
-  │   generate:                                                  │
-  │     runs-on: ubuntu-latest                                   │
-  │     steps:                                                   │
-  │       - uses: actions/checkout@v3                            │
-  │       - uses: Platane/snk@v3                                 │
-  │         with:                                                │
-  │           github_user_name: Sahal111                        │
-  │           outputs: |                                         │
-  │             dist/github-snake-dark.svg?palette=github-dark   │
-  │               &color_snake=38bdf8                           │
-  │       - uses: crazy-max/ghaction-github-pages@v3            │
-  │         with: { target_branch: output, build_dir: dist }     │
-  │         env: { GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} }  │
-  └──────────────────────────────────────────────────────────────┘
-
-  ── 2. SPOTIFY NOW PLAYING ─────────────────────────────────────
-  Deploy https://github.com/novatorem/novatorem to Vercel,
-  then add this to your profile repo Actions to auto-refresh:
-  File: .github/workflows/spotify.yml
-  ┌──────────────────────────────────────────────────────────────┐
-  │ name: Update Spotify                                         │
-  │ on:                                                          │
-  │   schedule: [{ cron: "*/30 * * * *" }]                      │
-  │ jobs:                                                        │
-  │   update:                                                    │
-  │     runs-on: ubuntu-latest                                   │
-  │     steps:                                                   │
-  │       - uses: actions/checkout@v3                            │
-  │       - name: Refresh Spotify token                          │
-  │         run: curl -X POST ${{ secrets.SPOTIFY_REFRESH_URL }} │
-  └──────────────────────────────────────────────────────────────┘
-
-  ── 3. WAKATIME STATS ──────────────────────────────────────────
-  File: .github/workflows/waka.yml
-  ┌──────────────────────────────────────────────────────────────┐
-  │ name: Waka Readme                                            │
-  │ on:                                                          │
-  │   schedule: [{ cron: "30 18 * * *" }]                       │
-  │   workflow_dispatch:                                         │
-  │ jobs:                                                        │
-  │   update-readme:                                             │
-  │     name: Update Readme with Wakatime Stats                  │
-  │     runs-on: ubuntu-latest                                   │
-  │     steps:                                                   │
-  │       - uses: anmol098/waka-readme-stats@master              │
-  │         with:                                                │
-  │           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}  │
-  │           GH_TOKEN: ${{ secrets.GH_TOKEN }}                  │
-  │           SHOW_LINES_OF_CODE: "True"                         │
-  │           SHOW_PROFILE_VIEWS: "False"                        │
-  └──────────────────────────────────────────────────────────────┘
-
-  ── 4. OPTIONAL WIDGETS ────────────────────────────────────────
-  • Holopin Badges  → https://holopin.io/@Sahal111
-    (Sign up at holopin.io to earn badges from open source work)
-  
-  • LeetCode Stats  → https://leetcard.jacoblin.cool/Sahal111
-    (Create account at leetcode.com/Sahal111)
-  
-  • Codewars        → https://www.codewars.com/users/Sahal111/badges/large
-    (Create account at codewars.com)
-  
-  • Discord Status  → https://lanyard.cnrad.dev/api/YOUR_DISCORD_ID
-    (Use Lanyard: discord.gg/lanyard, then add your user ID)
-═══════════════════════════════════════════════════════════════════
--->
-
-<!-- ██████████████████████████████████████████████████████████ -->
-<!--         NEON FOOTER — WAVE + DIGITAL SIGNATURE            -->
-<!-- ██████████████████████████████████████████████████████████ -->
-
-<div align="center">
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" width="100%">
-  <defs>
-    <linearGradient id="footerBg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#090c10" stop-opacity="0"/>
+    <linearGradient id="wipGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"  stop-color="#0d1a2e"/>
       <stop offset="100%" stop-color="#0d1117"/>
     </linearGradient>
-    <filter id="neonText" x="-10%" y="-10%" width="120%" height="120%">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <linearGradient id="waveFill1" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.5"/>
-      <stop offset="100%" stop-color="#0f172a" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="waveFill2" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.08"/>
-      <stop offset="100%" stop-color="#0f172a" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="waveFill3" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.06"/>
-      <stop offset="100%" stop-color="#0f172a" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="sigGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%"   stop-color="#38bdf8"/>
-      <stop offset="50%"  stop-color="#6366f1"/>
-      <stop offset="100%" stop-color="#14b8a6"/>
+    <linearGradient id="wipGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"  stop-color="#1a0d2e"/>
+      <stop offset="100%" stop-color="#0d1117"/>
     </linearGradient>
   </defs>
 
-  <!-- Base -->
-  <rect width="900" height="200" fill="url(#footerBg)"/>
+  <!-- WIP Project 1: School ERP -->
+  <rect x="0"   y="5" width="368" height="88" rx="10" fill="url(#wipGrad1)"/>
+  <rect x="0"   y="5" width="368" height="88" rx="10" fill="none" stroke="#38bdf8" stroke-width="0.8" opacity="0.5" stroke-dasharray="5 3"/>
+  <text x="20" y="30"  font-family="'Courier New',monospace" font-size="11" fill="#38bdf8" font-weight="bold">📚 School ERP System</text>
+  <rect x="260" y="18" width="36" height="16" rx="8" fill="#0d2818" stroke="#00ff41" stroke-width="0.7"/>
+  <text x="278" y="29" font-family="'Courier New',monospace" font-size="8" fill="#00ff41" text-anchor="middle">WIP</text>
+  <text x="20" y="50"  font-family="'Courier New',monospace" font-size="10" fill="#64748b">Comprehensive school management system</text>
+  <text x="20" y="65"  font-family="'Courier New',monospace" font-size="10" fill="#64748b">Stack: Laravel · React · MySQL · Filament</text>
+  <rect x="20" y="78" width="80"  height="8" rx="4" fill="#21262d"/>
+  <rect x="20" y="78" width="50"  height="8" rx="4" fill="#38bdf8" opacity="0.7">
+    <animate attributeName="width" from="0" to="50" dur="2s" fill="freeze"/>
+  </rect>
+  <text x="108" y="86" font-family="'Courier New',monospace" font-size="8" fill="#38bdf8">62% done</text>
 
-  <!-- Wave layer 3 (back) -->
-  <path d="M0,120 C150,80 300,160 450,120 C600,80 750,160 900,120 L900,200 L0,200 Z"
-        fill="url(#waveFill1)">
-    <animate attributeName="d"
-      values="M0,120 C150,80 300,160 450,120 C600,80 750,160 900,120 L900,200 L0,200 Z;
-              M0,100 C150,140 300,60 450,100 C600,140 750,60 900,100 L900,200 L0,200 Z;
-              M0,120 C150,80 300,160 450,120 C600,80 750,160 900,120 L900,200 L0,200 Z"
-      dur="8s" repeatCount="indefinite"/>
-  </path>
-
-  <!-- Wave layer 2 (mid) -->
-  <path d="M0,140 C225,100 450,180 675,140 C787,120 843,155 900,140 L900,200 L0,200 Z"
-        fill="url(#waveFill2)">
-    <animate attributeName="d"
-      values="M0,140 C225,100 450,180 675,140 C787,120 843,155 900,140 L900,200 L0,200 Z;
-              M0,160 C225,120 450,160 675,120 C787,100 843,135 900,120 L900,200 L0,200 Z;
-              M0,140 C225,100 450,180 675,140 C787,120 843,155 900,140 L900,200 L0,200 Z"
-      dur="6s" repeatCount="indefinite"/>
-  </path>
-
-  <!-- Wave layer 1 (front) -->
-  <path d="M0,160 C300,130 600,180 900,155 L900,200 L0,200 Z"
-        fill="url(#waveFill3)">
-    <animate attributeName="d"
-      values="M0,160 C300,130 600,180 900,155 L900,200 L0,200 Z;
-              M0,150 C300,175 600,140 900,165 L900,200 L0,200 Z;
-              M0,160 C300,130 600,180 900,155 L900,200 L0,200 Z"
-      dur="5s" repeatCount="indefinite"/>
-  </path>
-
-  <!-- Neon glowing line at top of footer -->
-  <line x1="0" y1="2" x2="900" y2="2" stroke="url(#sigGrad)" stroke-width="1.5" opacity="0.6"/>
-
-  <!-- Digital Signature — neon style -->
-  <text x="450" y="60" text-anchor="middle"
-        font-family="'Courier New', Courier, monospace"
-        font-size="36" font-weight="900"
-        fill="url(#sigGrad)" filter="url(#neonText)"
-        letter-spacing="4">
-    SAHAL
-    <animate attributeName="opacity" values="0.9;1;0.85;1;0.9" dur="3s" repeatCount="indefinite"/>
-  </text>
-
-  <!-- Underline glow -->
-  <line x1="310" y1="68" x2="590" y2="68" stroke="url(#sigGrad)" stroke-width="1.5" opacity="0.5">
-    <animate attributeName="opacity" values="0.5;0.9;0.5" dur="2s" repeatCount="indefinite"/>
-  </line>
-
-  <!-- Subtitle -->
-  <text x="450" y="92" text-anchor="middle"
-        font-family="'Courier New', monospace" font-size="11"
-        fill="#38bdf8" letter-spacing="6" opacity="0.7">
-    X_ PROFF · FULLSTACK DEVELOPER
-  </text>
-
-  <!-- Decorative particles near footer -->
-  <circle cx="120" cy="40" r="2" fill="#38bdf8" opacity="0.5">
-    <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="780" cy="35" r="1.5" fill="#6366f1" opacity="0.5">
-    <animate attributeName="opacity" values="0.5;1;0.5" dur="2.5s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="450" cy="20" r="1" fill="#14b8a6" opacity="0.6">
-    <animate attributeName="cy" values="20;10;20" dur="4s" repeatCount="indefinite"/>
-  </circle>
-
-  <!-- Made with line -->
-  <text x="450" y="125" text-anchor="middle"
-        font-family="'Courier New', monospace" font-size="11"
-        fill="#334155" letter-spacing="1">
-    Made with ❤️ + ☕ + console.log() · Indonesia 🇮🇩
-  </text>
-
-  <!-- Bottom copyright line -->
-  <text x="450" y="155" text-anchor="middle"
-        font-family="'Courier New', monospace" font-size="10"
-        fill="#1e293b">
-    © 2026 Sahal · All bugs are features in disguise 🐛
-  </text>
-
-  <!-- Corner brackets neon -->
-  <path d="M 20 185 L 20 195 L 30 195" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.4"/>
-  <path d="M 880 185 L 880 195 L 870 195" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.4"/>
+  <!-- WIP Project 2: AI Assistant -->
+  <rect x="392" y="5" width="368" height="88" rx="10" fill="url(#wipGrad2)"/>
+  <rect x="392" y="5" width="368" height="88" rx="10" fill="none" stroke="#6366f1" stroke-width="0.8" opacity="0.5" stroke-dasharray="5 3"/>
+  <text x="412" y="30"  font-family="'Courier New',monospace" font-size="11" fill="#6366f1" font-weight="bold">🤖 AI Chat Assistant</text>
+  <rect x="648" y="18" width="36" height="16" rx="8" fill="#1a0d2e" stroke="#6366f1" stroke-width="0.7"/>
+  <text x="666" y="29" font-family="'Courier New',monospace" font-size="8" fill="#6366f1" text-anchor="middle">WIP</text>
+  <text x="412" y="50"  font-family="'Courier New',monospace" font-size="10" fill="#64748b">Intelligent assistant with custom LLM</text>
+  <text x="412" y="65"  font-family="'Courier New',monospace" font-size="10" fill="#64748b">Stack: Python · FastAPI · React · OpenAI</text>
+  <rect x="412" y="78" width="80"  height="8" rx="4" fill="#21262d"/>
+  <rect x="412" y="78" width="20"  height="8" rx="4" fill="#6366f1" opacity="0.7">
+    <animate attributeName="width" from="0" to="20" dur="1.5s" fill="freeze"/>
+  </rect>
+  <text x="500" y="86" font-family="'Courier New',monospace" font-size="8" fill="#6366f1">25% done</text>
 </svg>
 
 </div>
 
-<!-- ██████████████████████████████████████████████████████████ -->
-<!--         TYPING ANIMATION — HERO (BELOW FOOTER)            -->
-<!-- ██████████████████████████████████████████████████████████ -->
+<br/>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--               GITHUB ANALYTICS                         -->
+<!-- ═══════════════════════════════════════════════════════ -->
+
+<h2 align="center">
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Bar%20Chart.png" width="28"/> &nbsp;GitHub Analytics
+</h2>
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=13&duration=2500&pause=800&color=38BDF8&background=0D111700&center=true&vCenter=true&multiline=false&width=700&lines=root%40Sahal111%3A~%24+echo+%22Thanks+for+visiting!%22;root%40Sahal111%3A~%24+git+push+origin+awesome-future;root%40Sahal111%3A~%24+sudo+make+me+a+sandwich;root%40Sahal111%3A~%24+npm+run+build+--+--success;Don%27t+forget+to+%E2%AD%90+star+repos+you+like!)](https://github.com/Sahal111)
+<!-- Stats + Languages -->
+<img src="https://github-readme-stats.vercel.app/api?username=Sahal111&show_icons=true&theme=chartreuse-dark&hide_border=true&bg_color=0d1117&title_color=00ff41&icon_color=38bdf8&text_color=94a3b8&ring_color=00ff41&border_radius=10&custom_title=Sahal111%27s+GitHub+Stats&include_all_commits=true&count_private=true" height="170" />
+&nbsp;
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Sahal111&layout=compact&theme=chartreuse-dark&hide_border=true&bg_color=0d1117&title_color=38bdf8&text_color=94a3b8&border_radius=10&langs_count=8" height="170" />
 
 </div>
 
----
+<br/>
+
+<!-- Streak -->
+<div align="center">
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=Sahal111&theme=terminal&hide_border=true&background=0d1117&ring=00ff41&fire=00ff41&currStreakLabel=00ff41&sideLabels=00cc33&dates=009922&sideNums=00ff41&currStreakNum=ffffff&border_radius=10" />
+
+</div>
+
+<br/>
+
+<!-- Activity Graph -->
+<div align="center">
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=Sahal111&bg_color=0d1117&color=00ff41&line=38bdf8&point=ffffff&area=true&hide_border=true&custom_title=Sahal111%27s+Contribution+Graph&radius=10" width="92%"/>
+
+</div>
+
+<br/>
+
+<!-- Trophy -->
+<div align="center">
+
+<img src="https://github-profile-trophy.vercel.app/?username=Sahal111&theme=matrix&no-frame=true&no-bg=true&row=1&column=6" />
+
+</div>
+
+<br/>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--           CONTRIBUTION SNAKE ANIMATION                  -->
+<!-- ═══════════════════════════════════════════════════════ -->
 
 <div align="center">
 
-<!-- Final visitor count -->
-![Visitor Count](https://komarev.com/ghpvc/?username=Sahal111&style=flat-square&color=38bdf8&label=Total+Profile+Views)
-&nbsp; · &nbsp;
-![Last Updated](https://img.shields.io/badge/Last_Updated-2026-38bdf8?style=flat-square&labelColor=0d1117)
-&nbsp; · &nbsp;
-![Open Source Love](https://img.shields.io/badge/Open_Source-❤️-6366f1?style=flat-square&labelColor=0d1117)
+<!-- 
+  ⚙️ SNAKE ANIMATION SETUP:
+  Create this GitHub Actions workflow → .github/workflows/snake.yml
+  ─────────────────────────────────────────────────────────────────
+  name: Generate Snake Animation
+  on:
+    schedule:
+      - cron: "0 */12 * * *"
+    workflow_dispatch:
+  jobs:
+    generate:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: Platane/snk@v3
+          with:
+            github_user_name: Sahal111
+            outputs: |
+              dist/snake.svg
+              dist/snake-dark.svg?palette=github-dark
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        - uses: crazy-max/ghaction-github-pages@v3
+          with:
+            target_branch: output
+            build_dir: dist
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  ─────────────────────────────────────────────────────────────────
+  After running, use this URL (replace YOUR_USERNAME):
+-->
+
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/Sahal111/Sahal111/output/snake-dark.svg"/>
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Sahal111/Sahal111/output/snake.svg"/>
+  <img alt="Snake animation" src="https://raw.githubusercontent.com/Sahal111/Sahal111/output/snake.svg"/>
+</picture>
 
 </div>
 
-<!-- END OF README ─────────────────────────────────────────── -->
+<br/>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--          NOW PLAYING + CODING STATUS                    -->
+<!-- ═══════════════════════════════════════════════════════ -->
+
+<h2 align="center">
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Headphone.png" width="28"/> &nbsp;Live Status
+</h2>
+
+<div align="center">
+
+<!--
+  ♫ SPOTIFY NOW PLAYING SETUP:
+  ─────────────────────────────────────────────────────────────────
+  1. Fork → github.com/novatorem/novatorem
+  2. Deploy to Vercel with your Spotify credentials
+  3. Add SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET, SPOTIFY_REFRESH_TOKEN to Vercel env
+  4. Replace YOUR_VERCEL_APP with your deployment URL below
+  ─────────────────────────────────────────────────────────────────
+  <img src="https://YOUR_VERCEL_APP.vercel.app/api/spotify" width="380"/>
+  ─────────────────────────────────────────────────────────────────
+  For now, using the badge placeholder:
+-->
+
+[![Spotify](https://img.shields.io/badge/Spotify-Lo--fi%20Beats%20🎵-1DB954?style=for-the-badge&logo=spotify&logoColor=white&labelColor=0d1117)](https://open.spotify.com)
+
+<!--
+  ⚡ WAKATIME SETUP:
+  ─────────────────────────────────────────────────────────────────
+  1. Sign up at wakatime.com
+  2. Install WakaTime plugin in VS Code
+  3. Add WAKATIME_API_KEY to GitHub Secrets
+  4. Create .github/workflows/waka-readme.yml
+  ─────────────────────────────────────────────────────────────────
+  Then uncomment:
+  <img src="https://github-readme-stats.vercel.app/api/wakatime?username=Sahal111&theme=chartreuse-dark&hide_border=true&bg_color=0d1117&title_color=00ff41&text_color=94a3b8&border_radius=10&layout=compact"/>
+-->
+
+</div>
+
+<br/>
+
+<!-- Currently Coding Status Card (SVG) -->
+<div align="center">
+
+<svg width="560" height="80" viewBox="0 0 560 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="codingBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"  stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <filter id="codingGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="codingClip">
+      <rect x="0" y="0" width="560" height="80" rx="10" ry="10"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#codingClip)">
+    <rect width="560" height="80" fill="url(#codingBg)"/>
+    <rect width="560" height="80" fill="none" stroke="#00ff41" stroke-width="0.8" opacity="0.4"/>
+
+    <!-- Pulsing live dot -->
+    <circle cx="24" cy="40" r="6" fill="#00ff41" filter="url(#codingGlow)">
+      <animate attributeName="r"       values="6;9;6"   dur="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="24" cy="40" r="3" fill="#00ff41"/>
+
+    <text x="44" y="34" font-family="'Courier New',monospace" font-size="10" fill="#475569">CURRENTLY CODING</text>
+    <text x="44" y="54" font-family="'Courier New',monospace" font-size="14" fill="#e2e8f0" font-weight="bold">School ERP System</text>
+
+    <!-- Separator -->
+    <line x1="240" y1="15" x2="240" y2="65" stroke="#21262d" stroke-width="1"/>
+
+    <text x="260" y="30" font-family="'Courier New',monospace" font-size="10" fill="#475569">EDITOR</text>
+    <text x="260" y="46" font-family="'Courier New',monospace" font-size="12" fill="#38bdf8">VS Code</text>
+
+    <line x1="370" y1="15" x2="370" y2="65" stroke="#21262d" stroke-width="1"/>
+
+    <text x="390" y="30" font-family="'Courier New',monospace" font-size="10" fill="#475569">LANGUAGE</text>
+    <text x="390" y="46" font-family="'Courier New',monospace" font-size="12" fill="#f59e0b">PHP · JS</text>
+
+    <line x1="480" y1="15" x2="480" y2="65" stroke="#21262d" stroke-width="1"/>
+
+    <text x="498" y="30" font-family="'Courier New',monospace" font-size="10" fill="#475569">OS</text>
+    <text x="498" y="46" font-family="'Courier New',monospace" font-size="12" fill="#6366f1">Linux 🐧</text>
+  </g>
+</svg>
+
+</div>
+
+<br/>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--                    SVG DIVIDER                          -->
+<!-- ═══════════════════════════════════════════════════════ -->
+
+<div align="center">
+<svg width="100%" height="3" viewBox="0 0 800 3" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="divGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#0d1117" stop-opacity="0"/>
+      <stop offset="20%"  stop-color="#f59e0b"/>
+      <stop offset="50%"  stop-color="#00ff41"/>
+      <stop offset="80%"  stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1" y="1" fill="url(#divGrad3)"/>
+</svg>
+</div>
+
+<br/>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--               ACHIEVEMENT SECTION                       -->
+<!-- ═══════════════════════════════════════════════════════ -->
+
+<h2 align="center">
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Trophy.png" width="28"/> &nbsp;Achievements
+</h2>
+
+<div align="center">
+
+<svg width="780" height="180" viewBox="0 0 780 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="achGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="780" height="180" fill="#0d1117"/>
+
+  <!-- Achievement 1: Code Warrior -->
+  <rect x="10"  y="20" width="140" height="140" rx="12" fill="#161b22"/>
+  <rect x="10"  y="20" width="140" height="140" rx="12" fill="none" stroke="#f59e0b" stroke-width="1" opacity="0.7"/>
+  <text x="80"  y="72"  font-size="30" text-anchor="middle">⚔️</text>
+  <text x="80"  y="100" font-family="'Courier New',monospace" font-size="10" fill="#f59e0b" text-anchor="middle" font-weight="bold">CODE WARRIOR</text>
+  <text x="80"  y="116" font-family="'Courier New',monospace" font-size="9"  fill="#64748b" text-anchor="middle">270+ Commits</text>
+  <text x="80"  y="132" font-family="'Courier New',monospace" font-size="9"  fill="#64748b" text-anchor="middle">Consistent Pusher</text>
+  <circle cx="148" cy="28" r="10" fill="#161b22" stroke="#f59e0b" stroke-width="1"/>
+  <text x="148" y="32"  font-family="'Courier New',monospace" font-size="8" fill="#f59e0b" text-anchor="middle">🔥</text>
+
+  <!-- Achievement 2: Open Source -->
+  <rect x="166" y="20" width="140" height="140" rx="12" fill="#161b22"/>
+  <rect x="166" y="20" width="140" height="140" rx="12" fill="none" stroke="#00ff41" stroke-width="1" opacity="0.7"/>
+  <text x="236" y="72"  font-size="30" text-anchor="middle">🌱</text>
+  <text x="236" y="100" font-family="'Courier New',monospace" font-size="10" fill="#00ff41" text-anchor="middle" font-weight="bold">OPEN SOURCE</text>
+  <text x="236" y="116" font-family="'Courier New',monospace" font-size="9"  fill="#64748b" text-anchor="middle">14 Public Repos</text>
+  <text x="236" y="132" font-family="'Courier New',monospace" font-size="9"  fill="#64748b" text-anchor="middle">Community Builder</text>
+
+  <!-- Achievement 3: Full Stack -->
+  <rect x="322" y="20" width="140" height="140" rx="12" fill="#161b22"/>
+  <rect x="322" y="20" width="140" height="140" rx="12" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.7"/>
+  <text x="392" y="72"  font-size="30" text-anchor="middle">🚀</text>
+  <text x="392" y="100" font-family="'Courier New',monospace" font-size="10" fill="#38bdf8" text-anchor="middle" font-weight="bold">FULL-STACK</text>
+  <text x="392" y="116" font-family="'Courier New',monospace" font-size="9"  fill="#64748b" text-anchor="middle">React + Laravel</text>
+  <text x="392" y="132" font-family="'Courier New',monospace" font-size="9"  fill="#64748b" text-anchor="middle">End-to-End Dev</text>
+
+  <!-- Achievement 4: ML Explorer -->
+  <rect x="478" y="20" width="140" height="140" rx="12" fill="#161b22"/>
+  <rect x="478" y="20" width="140" height="140" rx="12" fill="none" stroke="#6366f1" stroke-width="1" opacity="0.7"/>
+  <text x="548" y="72"  font-size="30" text-anchor="middle">🧠</text>
+  <text x="548" y="100" font-family="'Courier New',monospace" font-size="10" fill="#6366f1" text-anchor="middle" font-weight="bold">ML EXPLORER</text>
+  <text x="548" y="116" font-family="'Courier New',monospace" font-size="9"  fill="#64748b" text-anchor="middle">Python · Jupyter</text>
+  <text x="548" y="132" font-family="'Courier New',monospace" font-size="9"  fill="#64748b" text-anchor="middle">Scikit · Pandas</text>
+
+  <!-- Achievement 5: Rapid Learner -->
+  <rect x="634" y="20" width="140" height="140" rx="12" fill="#161b22"/>
+  <rect x="634" y="20" width="140" height="140" rx="12" fill="none" stroke="#14b8a6" stroke-width="1" opacity="0.7"/>
+  <text x="704" y="72"  font-size="30" text-anchor="middle">⚡</text>
+  <text x="704" y="100" font-family="'Courier New',monospace" font-size="10" fill="#14b8a6" text-anchor="middle" font-weight="bold">SPEED CODER</text>
+  <text x="704" y="116" font-family="'Courier New',monospace" font-size="9"  fill="#64748b" text-anchor="middle">Multi-Tech Stack</text>
+  <text x="704" y="132" font-family="'Courier New',monospace" font-size="9"  fill="#64748b" text-anchor="middle">2yr Journey</text>
+</svg>
+
+</div>
+
+<br/>
+
+<!-- GitHub Trophy -->
+<div align="center">
+<img src="https://github-profile-trophy.vercel.app/?username=Sahal111&theme=matrix&no-frame=true&no-bg=true&row=2&column=4&margin-w=10&margin-h=10"/>
+</div>
+
+<br/>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--               EXTERNAL WIDGETS                          -->
+<!-- ═══════════════════════════════════════════════════════ -->
+
+<!--
+  📊 LEETCODE WIDGET (activate if you have LeetCode account):
+  ─────────────────────────────────────────────────────────────────
+  <div align="center">
+  <img src="https://leetcard.jacoblin.com/Sahal111?theme=dark&font=Roboto+Mono&ext=contest&width=450&border=0&radius=10&bg=0d1117"/>
+  </div>
+
+  ⚔️ CODEWARS BADGE (activate after creating account at codewars.com/users/Sahal111):
+  ─────────────────────────────────────────────────────────────────
+  <div align="center">
+  <img src="https://www.codewars.com/users/Sahal111/badges/large"/>
+  </div>
+
+  🏅 HOLOPIN BADGES (activate after earning badges at holopin.io):
+  ─────────────────────────────────────────────────────────────────
+  <a href="https://holopin.io/@sahal111">
+    <img src="https://holopin.me/sahal111"/>
+  </a>
+-->
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--                   FUN FACTS                             -->
+<!-- ═══════════════════════════════════════════════════════ -->
+
+<h2 align="center">
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Game%20Die.png" width="28"/> &nbsp;Fun Facts
+</h2>
+
+<div align="center">
+
+<svg width="720" height="200" viewBox="0 0 720 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="funClip">
+      <rect x="0" y="0" width="720" height="200" rx="12" ry="12"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#funClip)">
+    <rect width="720" height="200" fill="#0d1117"/>
+    <rect width="720" height="200" fill="none" stroke="#334155" stroke-width="0.8"/>
+
+    <!-- Row 1 -->
+    <rect x="10" y="15" width="210" height="75" rx="8" fill="#161b22"/>
+    <text x="30" y="42" font-family="monospace" font-size="20">☕</text>
+    <text x="58" y="42" font-family="'Courier New',monospace" font-size="11" fill="#f59e0b" font-weight="bold">Coffee First</text>
+    <text x="30" y="60" font-family="'Courier New',monospace" font-size="9"  fill="#64748b">Can't compile without</text>
+    <text x="30" y="75" font-family="'Courier New',monospace" font-size="9"  fill="#64748b">at least 2 cups/day ☕</text>
+
+    <rect x="235" y="15" width="210" height="75" rx="8" fill="#161b22"/>
+    <text x="255" y="42" font-family="monospace" font-size="20">🎵</text>
+    <text x="283" y="42" font-family="'Courier New',monospace" font-size="11" fill="#38bdf8" font-weight="bold">Lo-fi Dev</text>
+    <text x="255" y="60" font-family="'Courier New',monospace" font-size="9"  fill="#64748b">Productivity x10 with</text>
+    <text x="255" y="75" font-family="'Courier New',monospace" font-size="9"  fill="#64748b">Lo-fi hip hop beats 🎧</text>
+
+    <rect x="460" y="15" width="250" height="75" rx="8" fill="#161b22"/>
+    <text x="480" y="42" font-family="monospace" font-size="20">🐛</text>
+    <text x="508" y="42" font-family="'Courier New',monospace" font-size="11" fill="#6366f1" font-weight="bold">Bug Whisperer</text>
+    <text x="480" y="60" font-family="'Courier New',monospace" font-size="9"  fill="#64748b">99% bugs are fixed by</text>
+    <text x="480" y="75" font-family="'Courier New',monospace" font-size="9"  fill="#64748b">console.log() 🎉</text>
+
+    <!-- Row 2 -->
+    <rect x="10" y="105" width="210" height="75" rx="8" fill="#161b22"/>
+    <text x="30" y="132" font-family="monospace" font-size="20">🌙</text>
+    <text x="58" y="132" font-family="'Courier New',monospace" font-size="11" fill="#00ff41" font-weight="bold">Night Coder</text>
+    <text x="30" y="150" font-family="'Courier New',monospace" font-size="9"  fill="#64748b">Best ideas come at</text>
+    <text x="30" y="165" font-family="'Courier New',monospace" font-size="9"  fill="#64748b">2am, not kidding 🌙</text>
+
+    <rect x="235" y="105" width="210" height="75" rx="8" fill="#161b22"/>
+    <text x="255" y="132" font-family="monospace" font-size="20">🇮🇩</text>
+    <text x="283" y="132" font-family="'Courier New',monospace" font-size="11" fill="#f59e0b" font-weight="bold">Proud Indonesian</text>
+    <text x="255" y="150" font-family="'Courier New',monospace" font-size="9"  fill="#64748b">Building tech from</text>
+    <text x="255" y="165" font-family="'Courier New',monospace" font-size="9"  fill="#64748b">Southeast Asia 🌏</text>
+
+    <rect x="460" y="105" width="250" height="75" rx="8" fill="#161b22"/>
+    <text x="480" y="132" font-family="monospace" font-size="20">🎯</text>
+    <text x="508" y="132" font-family="'Courier New',monospace" font-size="11" fill="#14b8a6" font-weight="bold">Goal Setter</text>
+    <text x="480" y="150" font-family="'Courier New',monospace" font-size="9"  fill="#64748b">Every year: better code,</text>
+    <text x="480" y="165" font-family="'Courier New',monospace" font-size="9"  fill="#64748b">bigger impact 💪</text>
+  </g>
+</svg>
+
+</div>
+
+<br/>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--              RANDOM DEV QUOTE                           -->
+<!-- ═══════════════════════════════════════════════════════ -->
+
+<div align="center">
+
+<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark&border=true&quote=Code+is+like+humor.+When+you+have+to+explain+it%2C+it%27s+bad.&author=Cory+House" width="680" />
+
+</div>
+
+<br/>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--             SOCIAL & CONNECT SECTION                    -->
+<!-- ═══════════════════════════════════════════════════════ -->
+
+<h2 align="center">
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Globe%20Showing%20Asia-Australia.png" width="28"/> &nbsp;Connect With Me
+</h2>
+
+<div align="center">
+
+<a href="https://github.com/Sahal111">
+  <img src="https://img.shields.io/badge/GitHub-Sahal111-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=0d1117"/>
+</a>
+&nbsp;
+<a href="https://linkedin.com/in/sahal111">
+  <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0d1117"/>
+</a>
+&nbsp;
+<a href="https://instagram.com/sahal111">
+  <img src="https://img.shields.io/badge/Instagram-@X__proff-E4405F?style=for-the-badge&logo=instagram&logoColor=white&labelColor=0d1117"/>
+</a>
+&nbsp;
+<a href="mailto:sahal@gmail.com">
+  <img src="https://img.shields.io/badge/Email-Say_Hello-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0d1117"/>
+</a>
+
+</div>
+
+<br/>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--              MATRIX RAIN BACKGROUND FOOTER              -->
+<!-- ═══════════════════════════════════════════════════════ -->
+
+<div align="center">
+
+<svg width="100%" height="160" viewBox="0 0 1440 160" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="footerBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"  stop-color="#0d1117" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#060d0d"/>
+    </linearGradient>
+    <filter id="matrixGlow">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1440" height="160" fill="#0d1117"/>
+
+  <!-- Matrix rain characters (decorative) -->
+  <!-- Column 1 -->
+  <text x="40"  y="20"  font-family="'Courier New',monospace" font-size="11" fill="#00ff41" opacity="0.7" filter="url(#matrixGlow)">1</text>
+  <text x="40"  y="35"  font-family="'Courier New',monospace" font-size="11" fill="#00ff41" opacity="0.5">0</text>
+  <text x="40"  y="50"  font-family="'Courier New',monospace" font-size="11" fill="#00ff41" opacity="0.3">1</text>
+  <text x="40"  y="65"  font-family="'Courier New',monospace" font-size="11" fill="#00ff41" opacity="0.15">1</text>
+  <!-- Column 2 -->
+  <text x="90"  y="10"  font-family="'Courier New',monospace" font-size="11" fill="#00ff41" opacity="0.8" filter="url(#matrixGlow)">0</text>
+  <text x="90"  y="25"  font-family="'Courier New',monospace" font-size="11" fill="#00ff41" opacity="0.6">1</text>
+  <text x="90"  y="40"  font-family="'Courier New',monospace" font-size="11" fill="#00ff41" opacity="0.35">0</text>
+  <!-- Column 3 -->
+  <text x="140" y="30"  font-family="'Courier New',monospace" font-size="11" fill="#38bdf8" opacity="0.6" filter="url(#matrixGlow)">S</text>
+  <text x="140" y="45"  font-family="'Courier New',monospace" font-size="11" fill="#38bdf8" opacity="0.4">A</text>
+  <text x="140" y="60"  font-family="'Courier New',monospace" font-size="11" fill="#38bdf8" opacity="0.2">H</text>
+  <!-- Column 4 -->
+  <text x="190" y="15"  font-family="'Courier New',monospace" font-size="11" fill="#00ff41" opacity="0.7" filter="url(#matrixGlow)">1</text>
+  <text x="190" y="30"  font-family="'Courier New',monospace" font-size="11" fill="#00ff41" opacity="0.5">1</text>
+  <text x="190" y="45"  font-family="'Courier New',monospace" font-size="11" fill="#00ff41" opacity="0.3">1</text>
+  <!-- Column 5 -->
+  <text x="240" y="25"  font-family="'Courier New',monospace" font-size="11" fill="#6366f1" opacity="0.7" filter="url(#matrixGlow)">λ</text>
+  <text x="240" y="40"  font-family="'Courier New',monospace" font-size="11" fill="#6366f1" opacity="0.4">∞</text>
+  <!-- Repeat pattern across -->
+  <text x="1260" y="20" font-family="'Courier New',monospace" font-size="11" fill="#00ff41" opacity="0.7" filter="url(#matrixGlow)">0</text>
+  <text x="1260" y="35" font-family="'Courier New',monospace" font-size="11" fill="#00ff41" opacity="0.5">1</text>
+  <text x="1310" y="10" font-family="'Courier New',monospace" font-size="11" fill="#00ff41" opacity="0.8" filter="url(#matrixGlow)">1</text>
+  <text x="1310" y="25" font-family="'Courier New',monospace" font-size="11" fill="#00ff41" opacity="0.6">0</text>
+  <text x="1360" y="30" font-family="'Courier New',monospace" font-size="11" fill="#38bdf8" opacity="0.6" filter="url(#matrixGlow)">A</text>
+  <text x="1360" y="45" font-family="'Courier New',monospace" font-size="11" fill="#38bdf8" opacity="0.4">L</text>
+  <text x="1400" y="15" font-family="'Courier New',monospace" font-size="11" fill="#6366f1" opacity="0.7" filter="url(#matrixGlow)">λ</text>
+
+  <!-- Gradient overlay -->
+  <rect width="1440" height="160" fill="url(#footerBg)"/>
+</svg>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!--              ANIMATED WAVE + NEON FOOTER                -->
+<!-- ═══════════════════════════════════════════════════════ -->
+
+<div align="center">
+
+<svg width="100%" height="180" viewBox="0 0 1440 180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="waveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#00ff41" stop-opacity="0.8"/>
+      <stop offset="30%"  stop-color="#38bdf8" stop-opacity="0.9"/>
+      <stop offset="60%"  stop-color="#6366f1" stop-opacity="0.9"/>
+      <stop offset="80%"  stop-color="#14b8a6" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#00ff41" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="waveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#6366f1" stop-opacity="0.5"/>
+      <stop offset="50%"  stop-color="#00ff41" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.5"/>
+    </linearGradient>
+    <filter id="waveGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1440" height="180" fill="#060d0d"/>
+
+  <!-- Wave layer 3 (back) -->
+  <path d="M0,100 C200,60 400,130 600,90 C800,50 1000,110 1200,80 C1300,65 1380,90 1440,75 L1440,180 L0,180 Z"
+        fill="#6366f1" opacity="0.07"/>
+
+  <!-- Wave layer 2 (mid) -->
+  <path d="M0,110 C240,70 480,140 720,100 C960,60 1200,120 1440,90 L1440,180 L0,180 Z"
+        fill="#38bdf8" opacity="0.06"/>
+
+  <!-- Wave layer 1 (front animated) - neon line -->
+  <path d="M0,120 C180,80 360,150 540,110 C720,70 900,130 1080,100 C1260,70 1380,110 1440,95 L1440,100 C1380,115 1260,75 1080,105 C900,135 720,75 540,115 C360,155 180,85 0,125 Z"
+        fill="url(#waveGrad1)" opacity="0.15" filter="url(#waveGlow)">
+    <animateTransform attributeName="transform" type="translate" values="0,0; -30,5; 0,0" dur="6s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Neon wave line -->
+  <path d="M0,120 C180,80 360,150 540,110 C720,70 900,130 1080,100 C1260,70 1380,110 1440,95"
+        fill="none" stroke="url(#waveGrad1)" stroke-width="1.5" filter="url(#waveGlow)">
+    <animateTransform attributeName="transform" type="translate" values="0,0; -20,3; 0,0" dur="6s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Second wave line -->
+  <path d="M0,130 C200,95 400,155 600,120 C800,85 1000,140 1200,115 C1320,100 1400,125 1440,115"
+        fill="none" stroke="url(#waveGrad2)" stroke-width="1" opacity="0.6">
+    <animateTransform attributeName="transform" type="translate" values="0,0; 15,-4; 0,0" dur="8s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Digital signature (neon style) -->
+  <!-- Glow effect for signature -->
+  <text x="720" y="75" font-family="'Courier New',monospace" font-size="28" fill="#00ff41"
+        text-anchor="middle" opacity="0.05" font-weight="bold">Sahal111</text>
+  <text x="720" y="75" font-family="'Courier New',monospace" font-size="24" fill="#00ff41"
+        text-anchor="middle" font-weight="bold" filter="url(#waveGlow)" opacity="0.9">
+    ⌨️ Sahal · X_proff ⌨️
+  </text>
+
+  <!-- Neon signature underline -->
+  <line x1="550" y1="85" x2="890" y2="85" stroke="url(#waveGrad1)" stroke-width="1" opacity="0.6" filter="url(#waveGlow)"/>
+
+  <!-- Tagline -->
+  <text x="720" y="110" font-family="'Courier New',monospace" font-size="12" fill="#475569"
+        text-anchor="middle" letter-spacing="3">
+    // Made with ❤️ + ☕ + console.log() from Indonesia 🇮🇩
+  </text>
+
+  <!-- Social quick links -->
+  <text x="400" y="148" font-family="'Courier New',monospace" font-size="10" fill="#334155" text-anchor="middle">github.com/Sahal111</text>
+  <line x1="450" y1="143" x2="450" y2="153" stroke="#21262d" stroke-width="1"/>
+  <text x="540" y="148" font-family="'Courier New',monospace" font-size="10" fill="#334155" text-anchor="middle">@X_proff</text>
+  <line x1="590" y1="143" x2="590" y2="153" stroke="#21262d" stroke-width="1"/>
+  <text x="680" y="148" font-family="'Courier New',monospace" font-size="10" fill="#334155" text-anchor="middle">Indonesia 🇮🇩</text>
+  <line x1="740" y1="143" x2="740" y2="153" stroke="#21262d" stroke-width="1"/>
+  <text x="820" y="148" font-family="'Courier New',monospace" font-size="10" fill="#334155" text-anchor="middle">Open for collab ✅</text>
+  <line x1="900" y1="143" x2="900" y2="153" stroke="#21262d" stroke-width="1"/>
+  <text x="980" y="148" font-family="'Courier New',monospace" font-size="10" fill="#334155" text-anchor="middle">Building cool stuff 🚀</text>
+
+  <!-- Bottom line -->
+  <line x1="0" y1="165" x2="1440" y2="165" stroke="#0d1117" stroke-width="1"/>
+  <text x="720" y="175" font-family="'Courier New',monospace" font-size="9" fill="#1e293b" text-anchor="middle">
+    © 2025 Sahal111 · github.com/Sahal111 · Built with Markdown + SVG + ❤️
+  </text>
+</svg>
+
+</div>
+
+<!--
+╔══════════════════════════════════════════════════════════════════════════╗
+║                    GITHUB ACTIONS WORKFLOWS SETUP                        ║
+╠══════════════════════════════════════════════════════════════════════════╣
+║                                                                          ║
+║  1. SNAKE ANIMATION → .github/workflows/snake.yml                       ║
+║  ─────────────────────────────────────────────────────────────────────   ║
+║  name: Generate Snake                                                    ║
+║  on:                                                                     ║
+║    schedule: [{cron: "0 */12 * * *"}]                                   ║
+║    workflow_dispatch:                                                     ║
+║  jobs:                                                                   ║
+║    generate:                                                             ║
+║      runs-on: ubuntu-latest                                              ║
+║      steps:                                                              ║
+║        - uses: Platane/snk@v3                                            ║
+║          with:                                                           ║
+║            github_user_name: Sahal111                                   ║
+║            outputs: |                                                    ║
+║              dist/snake.svg                                              ║
+║              dist/snake-dark.svg?palette=github-dark                    ║
+║          env:                                                            ║
+║            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}                    ║
+║        - uses: crazy-max/ghaction-github-pages@v3                       ║
+║          with:                                                           ║
+║            target_branch: output                                         ║
+║            build_dir: dist                                               ║
+║          env:                                                            ║
+║            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}                    ║
+║                                                                          ║
+║  2. WAKATIME STATS → .github/workflows/waka.yml                         ║
+║  ─────────────────────────────────────────────────────────────────────   ║
+║  name: Waka Readme                                                       ║
+║  on:                                                                     ║
+║    schedule: [{cron: "0 0 * * *"}]                                      ║
+║    workflow_dispatch:                                                     ║
+║  jobs:                                                                   ║
+║    update-readme:                                                        ║
+║      runs-on: ubuntu-latest                                              ║
+║      steps:                                                              ║
+║        - uses: athul/waka-readme@master                                  ║
+║          with:                                                           ║
+║            WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}            ║
+║                                                                          ║
+╚══════════════════════════════════════════════════════════════════════════╝
+-->
