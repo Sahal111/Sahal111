@@ -15,7 +15,175 @@
   ⑥ Holopin Badges       → Earn at holopin.io
   ⑦ Leetcode             → Use leetcard.jacoblin.com with your username
   ⑧ Codewars             → www.codewars.com/users/Sahal111
--->
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- FEATURED PROJECTS GRID (SVG)                            -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div align="center">
+  <svg width="860" height="340" viewBox="0 0 860 340" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <!-- Background Gradients -->
+      <linearGradient id="bgGrid" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#0d1117"/>
+        <stop offset="100%" stop-color="#060d0d"/>
+      </linearGradient>
+      
+      <!-- Card Gradients -->
+      <linearGradient id="card1Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#0d1b2a"/>
+        <stop offset="100%" stop-color="#0d1117"/>
+      </linearGradient>
+      <linearGradient id="card2Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#0d2818"/>
+        <stop offset="100%" stop-color="#0d1117"/>
+      </linearGradient>
+      <linearGradient id="card3Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#1a0d2e"/>
+        <stop offset="100%" stop-color="#0d1117"/>
+      </linearGradient>
+
+      <!-- Glow Filters -->
+      <filter id="glowCyan">
+        <feGaussianBlur stdDeviation="2.5" result="blur"/>
+        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+      <filter id="glowGreen">
+        <feGaussianBlur stdDeviation="2.5" result="blur"/>
+        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+      <filter id="glowPurple">
+        <feGaussianBlur stdDeviation="2.5" result="blur"/>
+        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+      </filter>
+    </defs>
+
+    <!-- Main Container -->
+    <rect width="860" height="340" fill="url(#bgGrid)" rx="12"/>
+    
+    <!-- Header Section -->
+    <text x="30" y="40" font-family="'Courier New',monospace" font-size="14" fill="#6366f1">
+      └─<tspan fill="#00ff41">$</tspan><tspan fill="#e2e8f0"> ./show_featured_projects.sh --all</tspan>
+    </text>
+    <line x1="30" y1="55" x2="830" y2="55" stroke="#21262d" stroke-width="1" stroke-dasharray="4 4"/>
+
+    <!-- ========================================== -->
+    <!-- CARD 1: SNEAKERSHEAD                       -->
+    <!-- ========================================== -->
+    <g transform="translate(30, 80)">
+      <rect width="250" height="230" rx="8" fill="url(#card1Grad)"/>
+      <rect width="250" height="230" rx="8" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.4"/>
+      
+      <!-- Top Accent Line -->
+      <rect x="0" y="0" width="250" height="2" fill="#38bdf8" filter="url(#glowCyan)"/>
+      
+      <!-- Folder Icon -->
+      <svg x="15" y="15" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+      </svg>
+
+      <!-- GitHub Link Icon -->
+      <svg x="215" y="15" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+      </svg>
+
+      <text x="15" y="65" font-family="'Courier New',monospace" font-size="16" fill="#e2e8f0" font-weight="bold">Sneakershead</text>
+      
+      <!-- Description -->
+      <text x="15" y="90" font-family="'Courier New',monospace" font-size="12" fill="#94a3b8">Modern e-commerce store</text>
+      <text x="15" y="108" font-family="'Courier New',monospace" font-size="12" fill="#94a3b8">catalog layout and cart</text>
+      <text x="15" y="126" font-family="'Courier New',monospace" font-size="12" fill="#94a3b8">system, styled manually</text>
+      <text x="15" y="144" font-family="'Courier New',monospace" font-size="12" fill="#94a3b8">for maximum performance.</text>
+      
+      <!-- Tech Badges -->
+      <rect x="15" y="185" width="55" height="20" rx="10" fill="rgba(56,189,248,0.1)" stroke="#38bdf8" stroke-width="0.5"/>
+      <text x="42.5" y="199" font-family="'Courier New',monospace" font-size="10" fill="#38bdf8" text-anchor="middle">React</text>
+      
+      <rect x="75" y="185" width="70" height="20" rx="10" fill="rgba(249,115,22,0.1)" stroke="#f97316" stroke-width="0.5"/>
+      <text x="110" y="199" font-family="'Courier New',monospace" font-size="10" fill="#f97316" text-anchor="middle">Pure CSS</text>
+      
+      <rect x="150" y="185" width="50" height="20" rx="10" fill="rgba(234,88,12,0.1)" stroke="#ea580c" stroke-width="0.5"/>
+      <text x="175" y="199" font-family="'Courier New',monospace" font-size="10" fill="#ea580c" text-anchor="middle">HTML5</text>
+    </g>
+
+    <!-- ========================================== -->
+    <!-- CARD 2: SCHOOL ERP                         -->
+    <!-- ========================================== -->
+    <g transform="translate(305, 80)">
+      <rect width="250" height="230" rx="8" fill="url(#card2Grad)"/>
+      <rect width="250" height="230" rx="8" fill="none" stroke="#00ff41" stroke-width="1" opacity="0.6"/>
+      
+      <!-- Top Accent Line -->
+      <rect x="0" y="0" width="250" height="2" fill="#00ff41" filter="url(#glowGreen)"/>
+      
+      <!-- Folder Icon -->
+      <svg x="15" y="15" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00ff41" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+      </svg>
+      
+      <circle cx="215" cy="24" r="3.5" fill="#00ff41">
+        <animate attributeName="opacity" values="1;0.2;1" dur="1.5s" repeatCount="indefinite"/>
+      </circle>
+
+      <text x="15" y="65" font-family="'Courier New',monospace" font-size="16" fill="#e2e8f0" font-weight="bold">School-ERP</text>
+      
+      <!-- Description -->
+      <text x="15" y="90" font-family="'Courier New',monospace" font-size="12" fill="#94a3b8">Comprehensive dashboard</text>
+      <text x="15" y="108" font-family="'Courier New',monospace" font-size="12" fill="#94a3b8">managing static master</text>
+      <text x="15" y="126" font-family="'Courier New',monospace" font-size="12" fill="#94a3b8">records and recurring</text>
+      <text x="15" y="144" font-family="'Courier New',monospace" font-size="12" fill="#94a3b8">dynamic operational data.</text>
+      
+      <!-- Tech Badges -->
+      <rect x="15" y="185" width="65" height="20" rx="10" fill="rgba(239,68,68,0.1)" stroke="#ef4444" stroke-width="0.5"/>
+      <text x="47.5" y="199" font-family="'Courier New',monospace" font-size="10" fill="#ef4444" text-anchor="middle">Laravel</text>
+      
+      <rect x="85" y="185" width="55" height="20" rx="10" fill="rgba(56,189,248,0.1)" stroke="#38bdf8" stroke-width="0.5"/>
+      <text x="112.5" y="199" font-family="'Courier New',monospace" font-size="10" fill="#38bdf8" text-anchor="middle">React</text>
+      
+      <rect x="145" y="185" width="55" height="20" rx="10" fill="rgba(0,255,65,0.1)" stroke="#00ff41" stroke-width="0.5"/>
+      <text x="172.5" y="199" font-family="'Courier New',monospace" font-size="10" fill="#00ff41" text-anchor="middle">MySQL</text>
+    </g>
+
+    <!-- ========================================== -->
+    <!-- CARD 3: UTS ML                             -->
+    <!-- ========================================== -->
+    <g transform="translate(580, 80)">
+      <rect width="250" height="230" rx="8" fill="url(#card3Grad)"/>
+      <rect width="250" height="230" rx="8" fill="none" stroke="#6366f1" stroke-width="1" opacity="0.4"/>
+      
+      <!-- Top Accent Line -->
+      <rect x="0" y="0" width="250" height="2" fill="#6366f1" filter="url(#glowPurple)"/>
+      
+      <!-- Folder Icon -->
+      <svg x="15" y="15" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+      </svg>
+
+      <!-- GitHub Link Icon -->
+      <svg x="215" y="15" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+      </svg>
+
+      <text x="15" y="65" font-family="'Courier New',monospace" font-size="16" fill="#e2e8f0" font-weight="bold">UTS_ML_Sahal</text>
+      
+      <!-- Description -->
+      <text x="15" y="90" font-family="'Courier New',monospace" font-size="12" fill="#94a3b8">Predictive modeling and</text>
+      <text x="15" y="108" font-family="'Courier New',monospace" font-size="12" fill="#94a3b8">data processing pipeline</text>
+      <text x="15" y="126" font-family="'Courier New',monospace" font-size="12" fill="#94a3b8">implementing algorithms</text>
+      <text x="15" y="144" font-family="'Courier New',monospace" font-size="12" fill="#94a3b8">for midterm evaluation.</text>
+      
+      <!-- Tech Badges -->
+      <rect x="15" y="185" width="60" height="20" rx="10" fill="rgba(250,204,21,0.1)" stroke="#facc15" stroke-width="0.5"/>
+      <text x="45" y="199" font-family="'Courier New',monospace" font-size="10" fill="#facc15" text-anchor="middle">Python</text>
+      
+      <rect x="80" y="185" width="60" height="20" rx="10" fill="rgba(168,85,247,0.1)" stroke="#a855f7" stroke-width="0.5"/>
+      <text x="110" y="199" font-family="'Courier New',monospace" font-size="10" fill="#a855f7" text-anchor="middle">Pandas</text>
+      
+      <rect x="145" y="185" width="90" height="20" rx="10" fill="rgba(99,102,241,0.1)" stroke="#6366f1" stroke-width="0.5"/>
+      <text x="190" y="199" font-family="'Courier New',monospace" font-size="10" fill="#6366f1" text-anchor="middle">Scikit-learn</text>
+    </g>
+
+  </svg>
+</div>
 
 <!-- ═══════════════════════════════════════════════════════ -->
 <!--                   ANIMATED WAVE HEADER                  -->
