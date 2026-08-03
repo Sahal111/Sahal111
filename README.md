@@ -1,17 +1,13 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,30:0d2818,70:0d1117,100:0d1117&height=180&section=header&text=%20&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,30:0d2818,70:0d1117,100:0d1117&height=120&section=header&text=%20&animation=fadeIn" width="100%"/>
 
-```
- ██╗  ██╗     ██████╗ ██████╗  ██████╗ ███████╗███████╗
- ╚██╗██╔╝    ██╔══██╗██╔══██╗██╔═══██╗██╔════╝██╔════╝
-  ╚███╔╝     ██████╔╝██████╔╝██║   ██║█████╗  █████╗  
-  ██╔██╗     ██╔═══╝ ██╔══██╗██║   ██║██╔══╝  ██╔══╝  
- ██╔╝ ██╗    ██║     ██║  ██║╚██████╔╝██║     ██║     
- ╚═╝  ╚═╝    ╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝     
-```
+<!-- TERMINAL CONSOLE BANNER -->
+![Profile Console](./console_banner.svg)
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=20&duration=2500&pause=600&color=00FF41&background=0D111700&center=true&vCenter=true&width=620&lines=root%40Sahal111%3A~%24+whoami;%3E+Full-Stack+Developer+%F0%9F%9A%80;%3E+React+%7C+Laravel+%7C+Python;%3E+Building+cool+stuff+from+Indonesia+%F0%9F%87%AE%F0%9F%87%A9;%3E+Always+learning%2C+always+shipping+%F0%9F%94%A5;root%40Sahal111%3A~%24+_" alt="Typing SVG" />
+<br/>
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=18&duration=2500&pause=600&color=00FF41&background=0D111700&center=true&vCenter=true&width=620&lines=root%40Sahal111%3A~%24+whoami;Full-Stack+Developer+%F0%9F%9A%80;React+%7C+Laravel+%7C+Python+%7C+ML;Building+cool+stuff+from+Indonesia+%F0%9F%87%AE%F0%9F%87%A9;270%2B+contributions+in+2026+%F0%9F%94%A5;root%40Sahal111%3A~%24+_" alt="Typing SVG" />
 
 <br/>
 
@@ -22,36 +18,6 @@
 <img src="https://img.shields.io/badge/STATUS-OPEN_FOR_COLLAB-00ff41?style=for-the-badge&labelColor=0d1117" />
 
 </div>
-
----
-
-<img align="right" width="340" src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" />
-
-```bash
-┌─────────────────────────────────────────────┐
-│           SYSTEM INFO - Sahal111            │
-├─────────────────────────────────────────────┤
-│                                             │
-│  root@Sahal111:~$ cat about.json            │
-│                                             │
-│  {                                          │
-│    "name"     : "Sahal",                    │
-│    "alias"    : "X_proff",                  │
-│    "location" : "Indonesia 🇮🇩",            │
-│    "role"     : "Full-Stack Developer",     │
-│    "stack"    : ["React","Laravel","Python"],│
-│    "database" : ["MySQL", "PostgreSQL"],    │
-│    "tools"    : ["Git","VSCode","Figma"],   │
-│    "learning" : ["ML","DevOps","TypeScript"],│
-│    "open_to"  : "Collaborations ✅",        │
-│    "fun_fact" : "console.log() is my BFF"  │
-│  }                                          │
-│                                             │
-│  root@Sahal111:~$ _                         │
-└─────────────────────────────────────────────┘
-```
-
-<br clear="right"/>
 
 ---
 
@@ -177,8 +143,8 @@ root@Sahal111:~$ curl -s https://api.sahal.dev/social | jq '.links[]'
 <div align="center">
 
 ```bash
-root@Sahal111:~$ echo "Thanks for visiting! Don't forget to star repos you like ⭐"
-> Thanks for visiting! Don't forget to star repos you like ⭐
+root@Sahal111:~$ echo "Thanks for visiting! Don't forget to ⭐ star repos you like!"
+> Thanks for visiting! Don't forget to ⭐ star repos you like!
 
 root@Sahal111:~$ sudo shutdown -h now --message "See you next commit! 👋"
 > Broadcasting: See you next commit! 👋
